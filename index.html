@@ -1,583 +1,849 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Lucas Izan | Mis 3 Años</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+rel="stylesheet"
+>
 
 <style>
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    background: #21140c;
-    color: #f4e4c7;
-    font-family: "Playfair Display", serif;
-    overflow-x: hidden;
+body{
+    background:#21140c;
+    color:#f4e4c7;
+    font-family:"Playfair Display",serif;
+    overflow-x:hidden;
 }
 
-/* FONDO */
+/* =========================
+   FONDO
+========================= */
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
     background:
         linear-gradient(
-            rgba(28,17,9,0.88),
-            rgba(28,17,9,0.94)
+            rgba(28,17,9,.88),
+            rgba(28,17,9,.94)
         ),
         url("imagenes/pielvaca.jpg") center center / cover;
-    z-index: -1;
+
+    z-index:-1;
 }
 
 /* =========================
    PORTADA
 ========================= */
 
-.portada {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 30px 20px;
-    position: relative;
+.portada{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    position:relative;
 }
 
-.portada-contenido {
-    max-width: 850px;
-    width: 100%;
+.portada-contenido{
+
+    max-width:850px;
+    width:100%;
 }
 
-.calavera {
-    width: 95px;
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    opacity: 0.75;
+.calavera{
+
+    width:95px;
+
+    position:absolute;
+
+    top:25px;
+    right:25px;
+
+    opacity:.75;
 }
 
-.pre-titulo {
-    font-family: "Cinzel", serif;
-    color: #d8b46b;
-    letter-spacing: 5px;
-    font-size: 14px;
-    margin-bottom: 25px;
+.pre-titulo{
+
+    font-family:"Cinzel",serif;
+
+    color:#d8b46b;
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    margin-bottom:25px;
 }
 
-.portada h1 {
-    font-family: "Cinzel", serif;
-    font-size: clamp(55px, 12vw, 115px);
-    line-height: 0.9;
-    letter-spacing: 5px;
-    color: #f5e3bd;
-    text-shadow: 0 5px 20px #000;
+.portada h1{
+
+    font-family:"Cinzel",serif;
+
+    font-size:clamp(55px,12vw,115px);
+
+    line-height:.9;
+
+    letter-spacing:5px;
+
+    color:#f5e3bd;
+
+    text-shadow:0 5px 20px #000;
 }
 
-.portada h2 {
-    font-family: "Cinzel", serif;
-    color: #d6ad5c;
-    font-size: clamp(22px, 5vw, 40px);
-    letter-spacing: 7px;
-    margin-top: 22px;
+.portada h2{
+
+    font-family:"Cinzel",serif;
+
+    color:#d6ad5c;
+
+    font-size:clamp(22px,5vw,40px);
+
+    letter-spacing:7px;
+
+    margin-top:22px;
 }
 
-.papas-portada {
-    margin-top: 30px;
-    font-family: "Cinzel", serif;
-    font-size: 18px;
-    letter-spacing: 2px;
-    color: #f1dfbd;
+.papas-portada{
+
+    margin-top:30px;
+
+    font-family:"Cinzel",serif;
+
+    font-size:18px;
+
+    letter-spacing:2px;
+
+    color:#f1dfbd;
 }
 
-.papas-portada small {
-    display: block;
-    margin-top: 8px;
-    font-size: 12px;
-    letter-spacing: 4px;
-    color: #c5a671;
+.papas-portada small{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    color:#c5a671;
 }
 
-.fecha-portada {
-    margin-top: 28px;
-    font-family: "Cinzel", serif;
-    color: #e2c58e;
-    letter-spacing: 4px;
-    font-size: 16px;
+.fecha-portada{
+
+    margin-top:28px;
+
+    font-family:"Cinzel",serif;
+
+    color:#e2c58e;
+
+    letter-spacing:4px;
+
+    font-size:16px;
 }
 
-.boton-abrir {
-    margin-top: 38px;
-    padding: 15px 35px;
-    background: transparent;
-    border: 1px solid #d3aa5c;
-    color: #f4e4c7;
-    font-family: "Cinzel", serif;
-    letter-spacing: 3px;
-    cursor: pointer;
-    transition: 0.3s;
+.boton-abrir{
+
+    margin-top:38px;
+
+    padding:15px 35px;
+
+    background:transparent;
+
+    border:1px solid #d3aa5c;
+
+    color:#f4e4c7;
+
+    font-family:"Cinzel",serif;
+
+    letter-spacing:3px;
+
+    cursor:pointer;
+
+    transition:.3s;
 }
 
-.boton-abrir:hover {
-    background: #d3aa5c;
-    color: #21140c;
+.boton-abrir:hover{
+
+    background:#d3aa5c;
+
+    color:#21140c;
 }
 
 /* =========================
    SECCIONES
 ========================= */
 
-.seccion {
-    padding: 85px 20px;
+.seccion{
+
+    padding:85px 20px;
 }
 
-.contenedor {
-    max-width: 900px;
-    margin: auto;
+.contenedor{
+
+    max-width:900px;
+
+    margin:auto;
 }
 
-.titulo {
-    text-align: center;
-    font-family: "Cinzel", serif;
-    color: #d7b264;
-    font-size: 35px;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
+.titulo{
+
+    text-align:center;
+
+    font-family:"Cinzel",serif;
+
+    color:#d7b264;
+
+    font-size:35px;
+
+    letter-spacing:4px;
+
+    margin-bottom:20px;
 }
 
-.subtitulo {
-    text-align: center;
-    color: #d7c4a5;
-    line-height: 1.8;
-    max-width: 700px;
-    margin: 0 auto 45px;
+.subtitulo{
+
+    text-align:center;
+
+    color:#d7c4a5;
+
+    line-height:1.8;
+
+    max-width:700px;
+
+    margin:0 auto 45px;
 }
 
 /* =========================
    INTRO
 ========================= */
 
-.intro {
-    background: rgba(35,21,12,0.92);
-    text-align: center;
+.intro{
+
+    background:rgba(35,21,12,.92);
+
+    text-align:center;
 }
 
-.intro-texto {
-    max-width: 750px;
-    margin: auto;
-    font-size: 18px;
-    line-height: 2;
-    color: #ead8b9;
+.intro-texto{
+
+    max-width:750px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#ead8b9;
 }
 
-.intro-texto strong {
-    color: #f3dfb7;
+.intro-texto strong{
+
+    color:#f3dfb7;
 }
 
-.papas-intro {
-    margin-top: 28px;
-    font-family: "Cinzel", serif;
-    color: #d8b46b;
-    font-size: 20px;
-    letter-spacing: 2px;
+.papas-intro{
+
+    margin-top:28px;
+
+    font-family:"Cinzel",serif;
+
+    color:#d8b46b;
+
+    font-size:20px;
+
+    letter-spacing:2px;
 }
 
 /* =========================
    CUENTA REGRESIVA
 ========================= */
 
-.cuenta {
-    background: rgba(27,16,9,0.94);
-    text-align: center;
+.cuenta{
+
+    background:rgba(27,16,9,.94);
+
+    text-align:center;
 }
 
-.contadores {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 40px;
+.contadores{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:stretch;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
 }
 
-.contador {
-    width: 120px;
-    min-height: 105px;
-    border: 1px solid #8f6d3c;
-    background: rgba(0,0,0,0.25);
-    padding: 18px 10px;
+.contador{
+
+    width:120px;
+
+    min-height:105px;
+
+    border:1px solid #8f6d3c;
+
+    background:rgba(0,0,0,.25);
+
+    padding:18px 10px;
 }
 
-.contador-numero {
-    display: block;
-    font-family: "Cinzel", serif;
-    font-size: 38px;
-    color: #d9b56c;
-    line-height: 1.2;
+.contador-numero{
+
+    display:block;
+
+    font-family:"Cinzel",serif;
+
+    font-size:38px;
+
+    color:#d9b56c;
+
+    line-height:1.2;
 }
 
-.contador-texto {
-    display: block;
-    margin-top: 8px;
-    font-family: "Cinzel", serif;
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: #d2c09f;
+.contador-texto{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-family:"Cinzel",serif;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    color:#d2c09f;
 }
 
 /* =========================
    LINEA DEL TIEMPO
 ========================= */
 
-.eventos {
-    background: rgba(31,18,10,0.96);
+.eventos{
+
+    background:rgba(31,18,10,.96);
 }
 
-.linea-tiempo {
-    max-width: 750px;
-    margin: 60px auto 0;
-    position: relative;
-    padding-left: 45px;
+.linea-tiempo{
+
+    max-width:750px;
+
+    margin:60px auto 0;
+
+    position:relative;
+
+    padding-left:45px;
 }
 
-/* Línea */
+.linea-tiempo::before{
 
-.linea-tiempo::before {
-    content: "";
-    position: absolute;
-    left: 15px;
-    top: 5px;
-    bottom: 5px;
-    width: 2px;
-    background: #b58b4c;
+    content:"";
+
+    position:absolute;
+
+    left:15px;
+
+    top:5px;
+
+    bottom:5px;
+
+    width:2px;
+
+    background:#b58b4c;
 }
 
-.evento {
-    position: relative;
-    margin-bottom: 50px;
+.evento{
+
+    position:relative;
+
+    margin-bottom:50px;
 }
 
-.evento:last-child {
-    margin-bottom: 0;
+.evento:last-child{
+
+    margin-bottom:0;
 }
 
-/* Círculo */
+.evento-icono{
 
-.evento-icono {
-    position: absolute;
-    left: -47px;
-    top: 0;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    border: 2px solid #d5ac5e;
-    background: #28180d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
+    position:absolute;
+
+    left:-47px;
+
+    top:0;
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    border:2px solid #d5ac5e;
+
+    background:#28180d;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:15px;
 }
 
-/* Hora */
+.evento-hora{
 
-.evento-hora {
-    font-family: "Cinzel", serif;
-    color: #d9b56c;
-    font-size: 16px;
-    letter-spacing: 3px;
-    margin-bottom: 8px;
+    font-family:"Cinzel",serif;
+
+    color:#d9b56c;
+
+    font-size:16px;
+
+    letter-spacing:3px;
+
+    margin-bottom:8px;
 }
 
-/* Tarjeta */
+.evento-contenido{
 
-.evento-contenido {
-    border: 1px solid rgba(211,170,92,0.45);
+    border:1px solid rgba(211,170,92,.45);
+
     background:
         linear-gradient(
             135deg,
-            rgba(91,57,30,0.5),
-            rgba(28,16,9,0.8)
+            rgba(91,57,30,.5),
+            rgba(28,16,9,.8)
         );
-    padding: 25px;
+
+    padding:25px;
 }
 
-.evento-contenido h3 {
-    font-family: "Cinzel", serif;
-    color: #f1dfbd;
-    font-size: 24px;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
+.evento-contenido h3{
+
+    font-family:"Cinzel",serif;
+
+    color:#f1dfbd;
+
+    font-size:24px;
+
+    letter-spacing:2px;
+
+    margin-bottom:12px;
 }
 
-.lugar {
-    color: #f0dcb9;
-    font-size: 17px;
-    margin-bottom: 7px;
+.lugar{
+
+    color:#f0dcb9;
+
+    font-size:17px;
+
+    margin-bottom:7px;
 }
 
-.direccion {
-    color: #bfae91;
-    font-size: 14px;
-    line-height: 1.6;
+.direccion{
+
+    color:#bfae91;
+
+    font-size:14px;
+
+    line-height:1.6;
 }
 
-.boton-mapa {
-    display: inline-block;
-    margin-top: 18px;
-    padding: 10px 18px;
-    border: 1px solid #b99150;
-    color: #e4cc9f;
-    text-decoration: none;
-    font-family: "Cinzel", serif;
-    font-size: 11px;
-    letter-spacing: 2px;
+.boton-mapa{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    padding:10px 18px;
+
+    border:1px solid #b99150;
+
+    color:#e4cc9f;
+
+    text-decoration:none;
+
+    font-family:"Cinzel",serif;
+
+    font-size:11px;
+
+    letter-spacing:2px;
 }
 
-.boton-mapa:hover {
-    background: #c29a55;
-    color: #24150b;
-}
+.boton-mapa:hover{
 
-/* DRESS CODE */
+    background:#c29a55;
 
-.dress-titulo {
-    color: #d7b264 !important;
-}
-
-.botas {
-    display: block;
-    width: 170px;
-    max-width: 80%;
-    margin: 25px auto 15px;
-}
-
-.dress-texto {
-    color: #d7c4a5;
-    line-height: 1.8;
+    color:#24150b;
 }
 
 /* =========================
-   FOTO
+   DRESS CODE
 ========================= */
 
-.foto {
-    text-align: center;
-    background: rgba(37,22,12,0.94);
+.dress-titulo{
+
+    color:#d7b264 !important;
 }
 
-.foto-lucas {
-    display: block;
-    width: 420px;
-    max-width: 90%;
-    margin: 30px auto 0;
-    padding: 7px;
-    border: 1px solid #d3aa5c;
-    background: #24150b;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+.botas{
+
+    display:block;
+
+    width:170px;
+
+    max-width:80%;
+
+    margin:25px auto 15px;
+}
+
+.dress-texto{
+
+    color:#d7c4a5;
+
+    line-height:1.8;
+}
+
+/* =========================
+   FOTO DE LUCAS
+========================= */
+
+.foto{
+
+    text-align:center;
+
+    background:rgba(37,22,12,.94);
+}
+
+.foto-lucas{
+
+    display:block;
+
+    width:420px;
+
+    max-width:90%;
+
+    margin:30px auto 0;
+
+    padding:7px;
+
+    border:1px solid #d3aa5c;
+
+    background:#24150b;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.5);
 }
 
 /* =========================
    REGALO
 ========================= */
 
-.regalo {
-    text-align: center;
-    background: rgba(27,16,9,0.96);
+.regalo{
+
+    text-align:center;
+
+    background:rgba(27,16,9,.96);
 }
 
-.regalo-caja {
-    max-width: 650px;
-    margin: auto;
-    padding: 38px 25px;
-    border: 1px solid rgba(211,170,92,0.4);
-    background: rgba(0,0,0,0.2);
+.regalo-caja{
+
+    max-width:650px;
+
+    margin:auto;
+
+    padding:38px 25px;
+
+    border:1px solid rgba(211,170,92,.4);
+
+    background:rgba(0,0,0,.2);
 }
 
-.regalo-caja h3 {
-    font-family: "Cinzel", serif;
-    color: #d8b46b;
-    font-size: 24px;
-    margin-bottom: 20px;
+.regalo-caja h3{
+
+    font-family:"Cinzel",serif;
+
+    color:#d8b46b;
+
+    font-size:24px;
+
+    margin-bottom:20px;
 }
 
-.regalo-caja p {
-    color: #d9c6a7;
-    line-height: 1.9;
+.regalo-caja p{
+
+    color:#d9c6a7;
+
+    line-height:1.9;
 }
 
 /* =========================
-   WHATSAPP
+   CONFIRMACION
 ========================= */
 
-.confirmacion {
-    text-align: center;
-    background: rgba(39,23,12,0.95);
+.confirmacion{
+
+    text-align:center;
+
+    background:rgba(39,23,12,.95);
 }
 
-.boton-whatsapp {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 16px 30px;
-    background: #b48a49;
-    color: #24150b;
-    text-decoration: none;
-    font-family: "Cinzel", serif;
-    letter-spacing: 2px;
+.boton-whatsapp{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:16px 30px;
+
+    background:#b48a49;
+
+    color:#24150b;
+
+    text-decoration:none;
+
+    font-family:"Cinzel",serif;
+
+    letter-spacing:2px;
 }
 
-.boton-whatsapp:hover {
-    background: #d5ad61;
+.boton-whatsapp:hover{
+
+    background:#d5ad61;
 }
 
 /* =========================
    FOOTER
 ========================= */
 
-footer {
-    text-align: center;
-    padding: 60px 20px;
-    background: #170c06;
+footer{
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    background:#170c06;
 }
 
-.footer-lucas {
-    font-family: "Cinzel", serif;
-    font-size: 32px;
-    color: #d8b46b;
-    letter-spacing: 5px;
+.footer-lucas{
+
+    font-family:"Cinzel",serif;
+
+    font-size:32px;
+
+    color:#d8b46b;
+
+    letter-spacing:5px;
 }
 
-.footer-papas {
-    margin-top: 15px;
-    color: #e1cfb0;
-    font-size: 17px;
+.footer-papas{
+
+    margin-top:15px;
+
+    color:#e1cfb0;
+
+    font-size:17px;
 }
 
-.footer-fecha {
-    margin-top: 15px;
-    color: #a89473;
-    font-size: 13px;
-    letter-spacing: 3px;
+.footer-fecha{
+
+    margin-top:15px;
+
+    color:#a89473;
+
+    font-size:13px;
+
+    letter-spacing:3px;
 }
 
 /* =========================
-   MUSICA
+   BOTON DE MUSICA
 ========================= */
 
-.boton-musica {
-    position: fixed;
-    right: 18px;
-    bottom: 18px;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    border: 1px solid #d6ae60;
-    background: #27170c;
-    color: #d6ae60;
-    font-size: 22px;
-    cursor: pointer;
-    z-index: 100;
+.boton-musica{
+
+    position:fixed;
+
+    right:18px;
+
+    bottom:18px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    border:1px solid #d6ae60;
+
+    background:#27170c;
+
+    color:#d6ae60;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    z-index:100;
 }
 
 /* =========================
    CELULAR
 ========================= */
 
-@media (max-width: 600px) {
+@media(max-width:600px){
 
-    .calavera {
-        width: 60px;
-        top: 18px;
-        right: 18px;
+    .calavera{
+
+        width:60px;
+
+        top:18px;
+
+        right:18px;
     }
 
-    .pre-titulo {
-        font-size: 10px;
-        letter-spacing: 3px;
+    .pre-titulo{
+
+        font-size:10px;
+
+        letter-spacing:3px;
     }
 
-    .papas-portada {
-        font-size: 15px;
+    .papas-portada{
+
+        font-size:15px;
     }
 
-    .fecha-portada {
-        font-size: 13px;
+    .fecha-portada{
+
+        font-size:13px;
     }
 
-    .titulo {
-        font-size: 26px;
+    .titulo{
+
+        font-size:26px;
     }
 
-    .subtitulo {
-        font-size: 15px;
+    .subtitulo{
+
+        font-size:15px;
     }
 
-    .contadores {
-        gap: 8px;
+    .contadores{
+
+        gap:8px;
     }
 
-    .contador {
-        width: 76px;
-        min-height: 90px;
-        padding: 13px 5px;
+    .contador{
+
+        width:76px;
+
+        min-height:90px;
+
+        padding:13px 5px;
     }
 
-    .contador-numero {
-        font-size: 25px;
+    .contador-numero{
+
+        font-size:25px;
     }
 
-    .contador-texto {
-        font-size: 8px;
-        letter-spacing: 1px;
+    .contador-texto{
+
+        font-size:8px;
+
+        letter-spacing:1px;
     }
 
-    .linea-tiempo {
-        padding-left: 30px;
+    .linea-tiempo{
+
+        padding-left:30px;
     }
 
-    .linea-tiempo::before {
-        left: 9px;
+    .linea-tiempo::before{
+
+        left:9px;
     }
 
-    .evento-icono {
-        left: -36px;
-        width: 30px;
-        height: 30px;
-        font-size: 13px;
+    .evento-icono{
+
+        left:-36px;
+
+        width:30px;
+
+        height:30px;
+
+        font-size:13px;
     }
 
-    .evento-contenido {
-        padding: 19px 15px;
+    .evento-contenido{
+
+        padding:19px 15px;
     }
 
-    .evento-contenido h3 {
-        font-size: 19px;
+    .evento-contenido h3{
+
+        font-size:19px;
     }
 
-    .evento-hora {
-        font-size: 13px;
+    .evento-hora{
+
+        font-size:13px;
     }
 
-    .footer-lucas {
-        font-size: 25px;
+    .footer-lucas{
+
+        font-size:25px;
     }
+
 }
 
 </style>
+
 </head>
+
 
 <body>
 
@@ -591,7 +857,7 @@ footer {
     <img
         src="imagenes/craneo.png"
         class="calavera"
-        alt="Calavera"
+        alt="Calavera vaquera"
     >
 
     <div class="portada-contenido">
@@ -610,20 +876,27 @@ footer {
         </h2>
 
         <div class="papas-portada">
+
             Fátima Ordaz &amp; Daniel Fernández
 
             <small>
                 CON AMOR, SUS PAPÁS
             </small>
+
         </div>
 
         <div class="fecha-portada">
+
             14 · NOVIEMBRE · 2026
+
         </div>
+
+
+        <!-- BOTON QUE ABRE LA INVITACION Y ACTIVA MUSICA -->
 
         <button
             class="boton-abrir"
-            onclick="document.getElementById('inicio').scrollIntoView({behavior:'smooth'})"
+            onclick="abrirInvitacion()"
         >
             ABRIR INVITACIÓN
         </button>
@@ -633,11 +906,15 @@ footer {
 </section>
 
 
+
 <!-- ==================================
      INTRODUCCION
 ================================== -->
 
-<section class="seccion intro" id="inicio">
+<section
+    class="seccion intro"
+    id="inicio"
+>
 
     <div class="contenedor">
 
@@ -666,12 +943,15 @@ footer {
         </p>
 
         <div class="papas-intro">
+
             Con mucho amor, sus papás.
+
         </div>
 
     </div>
 
 </section>
+
 
 
 <!-- ==================================
@@ -692,6 +972,7 @@ footer {
 
 
         <div class="contadores">
+
 
             <div class="contador">
 
@@ -756,11 +1037,13 @@ footer {
 
             </div>
 
+
         </div>
 
     </div>
 
 </section>
+
 
 
 <!-- ==================================
@@ -824,6 +1107,7 @@ footer {
             </div>
 
 
+
             <!-- RECEPCION -->
 
             <div class="evento">
@@ -865,6 +1149,7 @@ footer {
             </div>
 
 
+
             <!-- DRESS CODE -->
 
             <div class="evento">
@@ -884,8 +1169,10 @@ footer {
                     </h3>
 
                     <p class="dress-texto">
+
                         Prepárate para vivir una celebración
                         con todo el estilo del viejo oeste.
+
                     </p>
 
                     <img
@@ -895,8 +1182,10 @@ footer {
                     >
 
                     <p class="dress-texto">
+
                         Sombreros, botas, mezclilla y mucho
                         espíritu vaquero son bienvenidos.
+
                     </p>
 
                 </div>
@@ -909,6 +1198,7 @@ footer {
     </div>
 
 </section>
+
 
 
 <!-- ==================================
@@ -938,6 +1228,7 @@ footer {
 </section>
 
 
+
 <!-- ==================================
      REGALO
 ================================== -->
@@ -957,6 +1248,7 @@ footer {
             </h3>
 
             <p>
+
                 Lo más importante para nosotros
                 es compartir este día contigo.
 
@@ -974,6 +1266,7 @@ footer {
 </section>
 
 
+
 <!-- ==================================
      CONFIRMACION
 ================================== -->
@@ -987,9 +1280,13 @@ footer {
         </h2>
 
         <p class="subtitulo">
+
             Ayúdanos confirmando tu asistencia.
+
             <br>
+
             ¡Será un gusto celebrar contigo!
+
         </p>
 
         <a
@@ -1003,6 +1300,7 @@ footer {
     </div>
 
 </section>
+
 
 
 <!-- ==================================
@@ -1026,6 +1324,7 @@ footer {
 </footer>
 
 
+
 <!-- ==================================
      MUSICA
 ================================== -->
@@ -1033,20 +1332,28 @@ footer {
 <audio
     id="musica"
     loop
+    preload="auto"
 >
+
     <source
         src="musica.mp3"
         type="audio/mpeg"
     >
+
 </audio>
+
+
+<!-- BOTON FLOTANTE -->
 
 <button
     class="boton-musica"
     id="botonMusica"
     onclick="reproducirMusica()"
+    aria-label="Reproducir o pausar música"
 >
     ♪
 </button>
+
 
 
 <script>
@@ -1055,59 +1362,83 @@ footer {
    CUENTA REGRESIVA
 ================================== */
 
-function actualizarCuenta() {
+function actualizarCuenta(){
 
-    var fechaEvento = new Date(
-        "2026-11-14T14:00:00-06:00"
-    ).getTime();
+    var fechaEvento =
+        new Date("2026-11-14T14:00:00-06:00").getTime();
 
-    var ahora = new Date().getTime();
+    var ahora =
+        new Date().getTime();
 
-    var diferencia = fechaEvento - ahora;
+    var diferencia =
+        fechaEvento - ahora;
 
 
-    if (diferencia <= 0) {
+    if(diferencia <= 0){
 
         document.getElementById("dias").innerHTML = "0";
+
         document.getElementById("horas").innerHTML = "0";
+
         document.getElementById("minutos").innerHTML = "0";
+
         document.getElementById("segundos").innerHTML = "0";
 
         return;
     }
 
 
-    var dias = Math.floor(
-        diferencia / (1000 * 60 * 60 * 24)
-    );
-
-    var horas = Math.floor(
-        (diferencia % (1000 * 60 * 60 * 24))
-        / (1000 * 60 * 60)
-    );
-
-    var minutos = Math.floor(
-        (diferencia % (1000 * 60 * 60))
-        / (1000 * 60)
-    );
-
-    var segundos = Math.floor(
-        (diferencia % (1000 * 60))
-        / 1000
-    );
+    var dias =
+        Math.floor(
+            diferencia /
+            (1000 * 60 * 60 * 24)
+        );
 
 
-    document.getElementById("dias").innerHTML = dias;
+    var horas =
+        Math.floor(
+            (diferencia %
+            (1000 * 60 * 60 * 24))
+            /
+            (1000 * 60 * 60)
+        );
 
-    document.getElementById("horas").innerHTML = horas;
 
-    document.getElementById("minutos").innerHTML = minutos;
+    var minutos =
+        Math.floor(
+            (diferencia %
+            (1000 * 60 * 60))
+            /
+            (1000 * 60)
+        );
 
-    document.getElementById("segundos").innerHTML = segundos;
+
+    var segundos =
+        Math.floor(
+            (diferencia %
+            (1000 * 60))
+            /
+            1000
+        );
+
+
+    document.getElementById("dias").innerHTML =
+        dias;
+
+    document.getElementById("horas").innerHTML =
+        horas;
+
+    document.getElementById("minutos").innerHTML =
+        minutos;
+
+    document.getElementById("segundos").innerHTML =
+        segundos;
+
 }
 
 
 actualizarCuenta();
+
 
 setInterval(
     actualizarCuenta,
@@ -1115,53 +1446,144 @@ setInterval(
 );
 
 
+
 /* ==================================
-   MUSICA
+   VARIABLES DE MUSICA
 ================================== */
 
-var musica = document.getElementById("musica");
+var musica =
+    document.getElementById("musica");
 
-var reproduciendo = false;
+var reproduciendo =
+    false;
 
 
-function reproducirMusica() {
 
-    if (!musica) {
+/* ==================================
+   ABRIR INVITACION
+   + INICIAR MUSICA
+================================== */
+
+function abrirInvitacion(){
+
+    /* Intentar reproducir la música */
+
+    musica.play()
+        .then(function(){
+
+            reproduciendo = true;
+
+            document.getElementById(
+                "botonMusica"
+            ).innerHTML = "❚❚";
+
+        })
+        .catch(function(){
+
+            console.log(
+                "La música no pudo iniciar."
+            );
+
+        });
+
+
+    /* Bajar a la invitación */
+
+    document.getElementById(
+        "inicio"
+    ).scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+
+/* ==================================
+   BOTON MUSICA
+================================== */
+
+function reproducirMusica(){
+
+    if(!musica){
+
         return;
+
     }
 
 
-    if (reproduciendo) {
+    if(reproduciendo){
 
         musica.pause();
 
         reproduciendo = false;
 
-        document.getElementById("botonMusica").innerHTML = "♪";
+        document.getElementById(
+            "botonMusica"
+        ).innerHTML = "♪";
 
-    } else {
+    }
+
+    else{
 
         musica.play()
-        .then(function() {
+            .then(function(){
 
-            reproduciendo = true;
+                reproduciendo = true;
 
-            document.getElementById("botonMusica").innerHTML = "❚❚";
+                document.getElementById(
+                    "botonMusica"
+                ).innerHTML = "❚❚";
 
-        })
-        .catch(function() {
+            })
 
-            alert(
-                "Todavía no has agregado el archivo musica.mp3 a tu repositorio."
-            );
+            .catch(function(){
 
-        });
+                alert(
+                    "No se pudo reproducir la música. Revisa que musica.mp3 esté en la página principal del repositorio."
+                );
+
+            });
 
     }
 
 }
 
+
+/* ==================================
+   CUANDO TERMINA / PAUSA
+================================== */
+
+musica.addEventListener(
+    "pause",
+    function(){
+
+        reproduciendo = false;
+
+        document.getElementById(
+            "botonMusica"
+        ).innerHTML = "♪";
+
+    }
+);
+
+
+musica.addEventListener(
+    "play",
+    function(){
+
+        reproduciendo = true;
+
+        document.getElementById(
+            "botonMusica"
+        ).innerHTML = "❚❚";
+
+    }
+);
+
 </script>
 
+
 </body>
+
 </html>
