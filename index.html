@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lucas Izan | Mis 3 años</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#eee5d5;
+    color:#3b271b;
+    font-family:Georgia,serif;
+}
+
+/* PORTADA */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px 20px;
+
+    background:
+        linear-gradient(
+            rgba(48,29,18,.88),
+            rgba(48,29,18,.88)
+        );
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.small{
+    color:#d9bb83;
+    letter-spacing:6px;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    color:#fff8eb;
+    font-size:clamp(65px,12vw,125px);
+    line-height:.78;
+    letter-spacing:4px;
+    text-shadow:4px 5px 0 #21130c;
+}
+
+.hero h1 span{
+    display:block;
+}
+
+.age{
+    display:inline-block;
+    border:1px solid #c49a58;
+    color:#f0d5a1;
+    padding:14px 35px;
+    margin:35px 0 25px;
+    letter-spacing:5px;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+}
+
+.date{
+    color:#fff;
+    letter-spacing:5px;
+    font-family:Arial,sans-serif;
+    font-size:13px;
+    margin-bottom:35px;
+}
+
+.button{
+    display:inline-block;
+    background:#9b6438;
+    border:1px solid #d4ad70;
+    color:white;
+    text-decoration:none;
+    padding:16px 30px;
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+/* SECCIONES */
+
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+.subtitle{
+    text-align:center;
+    color:#927143;
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.title{
+    text-align:center;
+    color:#4a3020;
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.line{
+    width:65px;
+    height:1px;
+    background:#b58a4a;
+    margin:0 auto 40px;
+}
+
+/* INTRO */
+
+.intro{
+    background:#f5eee1;
+    text-align:center;
+}
+
+.intro p{
+    max-width:650px;
+    margin:auto;
+    font-size:25px;
+    line-height:1.6;
+}
+
+/* CUENTA REGRESIVA */
+
+.countdown-section{
+    background:#39251a;
+    color:white;
+    text-align:center;
+}
+
+.countdown-section .title{
+    color:#fff6e7;
+}
+
+.countdown{
+    max-width:700px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.count{
+    border:1px solid #b58a4a;
+    padding:20px 5px;
+}
+
+.count strong{
+    display:block;
+    color:#e2c38e;
+    font-size:42px;
+}
+
+.count span{
+    font-family:Arial,sans-serif;
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+/* EVENTOS */
+
+.events{
+    background:#e7dac5;
+}
+
+.event{
+    max-width:700px;
+    margin:0 auto 35px;
+    padding:35px;
+    background:#f5eee1;
+    border-left:4px solid #9b6438;
+    text-align:center;
+}
+
+.event-time{
+    color:#8a572f;
+    font-size:38px;
+}
+
+.event h3{
+    font-size:30px;
+    margin:8px 0 15px;
+}
+
+.event p{
+    font-family:Arial,sans-serif;
+    font-size:13px;
+    line-height:1.8;
+    color:#6b5645;
+}
+
+.map{
+    display:inline-block;
+    margin-top:18px;
+    border:1px solid #9b6438;
+    padding:10px 18px;
+    color:#71492d;
+    text-decoration:none;
+    font-family:Arial,sans-serif;
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+/* VESTIMENTA */
+
+.dress{
+    text-align:center;
+    background:#f5eee1;
+}
+
+.dress p{
+    font-family:Arial,sans-serif;
+    color:#6b5645;
+}
+
+/* REGALO */
+
+.gift{
+    background:#39251a;
+    text-align:center;
+    color:white;
+}
+
+.gift .title{
+    color:#f5dfb8;
+}
+
+.gift-box{
+    max-width:650px;
+    margin:auto;
+    border:1px solid #b58a4a;
+    padding:40px 25px;
+}
+
+.gift-box p{
+    font-size:24px;
+    line-height:1.6;
+    color:#f7ead4;
+}
+
+/* CONFIRMAR */
+
+.confirm{
+    background:#e1d0b7;
+    text-align:center;
+}
+
+.whatsapp{
+    display:inline-block;
+    margin-top:25px;
+    background:#68462d;
+    color:white;
+    text-decoration:none;
+    padding:17px 28px;
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#21150e;
+    color:#bca98f;
+    text-align:center;
+    padding:35px 20px;
+    font-family:Arial,sans-serif;
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+/* MUSICA */
+
+.music{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    border:1px solid #d7b676;
+    background:#75492a;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    z-index:10;
+}
+
+/* MOVIL */
+
+@media(max-width:600px){
+
+    section{
+        padding:65px 18px;
+    }
+
+    .hero h1{
+        font-size:65px;
+    }
+
+    .title{
+        font-size:40px;
+    }
+
+    .intro p{
+        font-size:22px;
+    }
+
+    .countdown{
+        gap:6px;
+    }
+
+    .count{
+        padding:15px 3px;
+    }
+
+    .count strong{
+        font-size:30px;
+    }
+
+    .count span{
+        font-size:7px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+
+<div class="hero-content">
+
+<div class="small">
+UNA CELEBRACIÓN MUY ESPECIAL
+</div>
+
+<h1>
+<span>LUCAS</span>
+<span>IZAN</span>
+</h1>
+
+<div class="age">
+MIS 3 AÑOS
+</div>
+
+<div class="date">
+14 · NOVIEMBRE · 2026
+</div>
+
+<a href="#invitacion" class="button">
+ABRIR INVITACIÓN
+</a>
+
+</div>
+
+</header>
+
+
+<section class="intro" id="invitacion">
+
+<div class="container">
+
+<div class="subtitle">
+Con mucho cariño
+</div>
+
+<h2 class="title">
+¡Te esperamos!
+</h2>
+
+<div class="line"></div>
+
+<p>
+Hay momentos que se convierten en recuerdos
+para toda la vida.
+
+<br><br>
+
+Queremos celebrar junto a ustedes los
+<strong>3 años de Lucas Izan</strong>
+y nos encantaría contar con su presencia
+en este día tan especial.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="countdown-section">
+
+<div class="container">
+
+<div class="subtitle">
+Falta muy poquito
+</div>
+
+<h2 class="title">
+Nos vemos en...
+</h2>
+
+<div class="line"></div>
+
+<div class="countdown">
+
+<div class="count">
+<strong id="days">0</strong>
+<span>Días</span>
+</div>
+
+<div class="count">
+<strong id="hours">0</strong>
+<span>Horas</span>
+</div>
+
+<div class="count">
+<strong id="minutes">0</strong>
+<span>Minutos</span>
+</div>
+
+<div class="count">
+<strong id="seconds">0</strong>
+<span>Segundos</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="events">
+
+<div class="container">
+
+<div class="subtitle">
+Acompáñanos
+</div>
+
+<h2 class="title">
+El gran día
+</h2>
+
+<div class="line"></div>
+
+
+<div class="event">
+
+<div class="event-time">
+2:00 PM
+</div>
+
+<h3>
+Ceremonia religiosa
+</h3>
+
+<p>
+Parroquia Sr. de Esquipulas
+<br>
+Señor de Esquipulas 97
+<br>
+Arandas, 36626
+<br>
+Irapuato, Gto.
+</p>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Parroquia+Sr.+de+Esquipulas+Irapuato"
+target="_blank"
+class="map">
+VER UBICACIÓN
+</a>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-time">
+3:30 PM
+</div>
+
+<h3>
+Recepción
+</h3>
+
+<p>
+Salón Cheyene
+<br>
+Blvrd Arandas 3675
+<br>
+Villas de Irapuato
+<br>
+36821 Irapuato, Gto.
+</p>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Salon+Cheyene+Irapuato"
+target="_blank"
+class="map">
+VER UBICACIÓN
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="dress">
+
+<div class="container">
+
+<div class="subtitle">
+Código de vestimenta
+</div>
+
+<h2 class="title">
+¡Vámonos de vaqueros!
+</h2>
+
+<div class="line"></div>
+
+<p>
+<strong>Vaquero / Cowboy</strong>
+<br><br>
+Sombrero, botas, mezclilla y todo el estilo western
+que quieras llevar.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="gift">
+
+<div class="container">
+
+<div class="subtitle">
+Tu presencia es suficiente
+</div>
+
+<h2 class="title">
+Un detalle con cariño
+</h2>
+
+<div class="line"></div>
+
+<div class="gift-box">
+
+<p>
+Tu presencia es lo más importante para nosotros.
+
+<br><br>
+
+Si deseas tener un detalle con Lucas,
+agradeceremos mucho que sea
+<strong>en sobre</strong>.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="confirm">
+
+<div class="container">
+
+<div class="subtitle">
+Por favor confirma tu asistencia
+</div>
+
+<h2 class="title">
+¿Nos acompañas?
+</h2>
+
+<div class="line"></div>
+
+<p>
+Ayúdanos confirmando tu asistencia por WhatsApp.
+</p>
+
+<a
+href="https://wa.me/525548571323?text=Hola%20Quiero%20confirmar%20mi%20asistencia%20a%20los%203%20a%C3%B1os%20de%20Lucas%20Izan."
+target="_blank"
+class="whatsapp">
+CONFIRMAR POR WHATSAPP
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+LUCAS IZAN
+
+<br><br>
+
+14 · NOVIEMBRE · 2026
+
+<br><br>
+
+Con mucho cariño ♡
+
+</footer>
+
+
+<audio id="music" loop>
+<source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music" id="musicButton">
+♪
+</button>
+
+
+<script>
+
+const fecha = new Date("November 14, 2026 14:00:00").getTime();
+
+function actualizar(){
+
+const ahora = new Date().getTime();
+
+const diferencia = fecha - ahora;
+
+if(diferencia <= 0){
+return;
+}
+
+document.getElementById("days").textContent =
+Math.floor(diferencia / (1000*60*60*24));
+
+document.getElementById("hours").textContent =
+Math.floor((diferencia / (1000*60*60)) % 24);
+
+document.getElementById("minutes").textContent =
+Math.floor((diferencia / (1000*60)) % 60);
+
+document.getElementById("seconds").textContent =
+Math.floor((diferencia / 1000) % 60);
+
+}
+
+actualizar();
+
+setInterval(actualizar,1000);
+
+
+const music =
+document.getElementById("music");
+
+const button =
+document.getElementById("musicButton");
+
+button.addEventListener("click",function(){
+
+if(music.paused){
+
+music.play();
+
+button.textContent="❚❚";
+
+}else{
+
+music.pause();
+
+button.textContent="♪";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
