@@ -1,33 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lucas Izan | Mis 3 Años</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link
-href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
-rel="stylesheet"
->
+<title>3 años de Lucas Izan</title>
 
 <style>
 
-/* =========================
-   CONFIGURACIÓN GENERAL
-========================= */
-
 *{
     box-sizing:border-box;
-    margin:0;
-    padding:0;
 }
 
 html{
@@ -35,869 +17,414 @@ html{
 }
 
 body{
-    background:#21140c;
-    color:#f4e4c7;
-    font-family:"Playfair Display",serif;
-    overflow-x:hidden;
+    margin:0;
+    font-family:Georgia, "Times New Roman", serif;
+    background:#f4ead8;
+    color:#3b2416;
 }
 
-/* =========================
-   FONDO
-========================= */
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-
-    background:
-        linear-gradient(
-            rgba(28,17,9,.88),
-            rgba(28,17,9,.94)
-        ),
-        url("imagenes/pielvaca.jpg") center center / cover;
-
-    z-index:-1;
-}
-
-/* =========================
-   PORTADA
-========================= */
-
-.portada{
-
-    min-height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    padding:30px 20px;
-
-    position:relative;
-}
-
-.portada-contenido{
-
-    max-width:850px;
-    width:100%;
-}
-
-.calavera{
-
-    width:95px;
-
-    position:absolute;
-
-    top:25px;
-    right:25px;
-
-    opacity:.75;
-}
-
-.pre-titulo{
-
-    font-family:"Cinzel",serif;
-
-    color:#d8b46b;
-
-    letter-spacing:5px;
-
-    font-size:14px;
-
-    margin-bottom:25px;
-}
-
-.portada h1{
-
-    font-family:"Cinzel",serif;
-
-    font-size:clamp(55px,12vw,115px);
-
-    line-height:.9;
-
-    letter-spacing:5px;
-
-    color:#f5e3bd;
-
-    text-shadow:0 5px 20px #000;
-}
-
-.portada h2{
-
-    font-family:"Cinzel",serif;
-
-    color:#d6ad5c;
-
-    font-size:clamp(22px,5vw,40px);
-
-    letter-spacing:7px;
-
-    margin-top:22px;
-}
-
-.papas-portada{
-
-    margin-top:30px;
-
-    font-family:"Cinzel",serif;
-
-    font-size:18px;
-
-    letter-spacing:2px;
-
-    color:#f1dfbd;
-}
-
-.papas-portada small{
-
-    display:block;
-
-    margin-top:8px;
-
-    font-size:12px;
-
-    letter-spacing:4px;
-
-    color:#c5a671;
-}
-
-.fecha-portada{
-
-    margin-top:28px;
-
-    font-family:"Cinzel",serif;
-
-    color:#e2c58e;
-
-    letter-spacing:4px;
-
-    font-size:16px;
-}
-
-.boton-abrir{
-
-    margin-top:38px;
-
-    padding:15px 35px;
-
-    background:transparent;
-
-    border:1px solid #d3aa5c;
-
-    color:#f4e4c7;
-
-    font-family:"Cinzel",serif;
-
-    letter-spacing:3px;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-.boton-abrir:hover{
-
-    background:#d3aa5c;
-
-    color:#21140c;
-}
-
-/* =========================
-   SECCIONES
-========================= */
-
-.seccion{
-
-    padding:85px 20px;
+section{
+    padding:70px 20px;
 }
 
 .contenedor{
-
     max-width:900px;
-
     margin:auto;
 }
 
-.titulo{
+/* PORTADA */
 
-    text-align:center;
-
-    font-family:"Cinzel",serif;
-
-    color:#d7b264;
-
-    font-size:35px;
-
-    letter-spacing:4px;
-
-    margin-bottom:20px;
-}
-
-.subtitulo{
-
-    text-align:center;
-
-    color:#d7c4a5;
-
-    line-height:1.8;
-
-    max-width:700px;
-
-    margin:0 auto 45px;
-}
-
-/* =========================
-   INTRO
-========================= */
-
-.intro{
-
-    background:rgba(35,21,12,.92);
-
-    text-align:center;
-}
-
-.intro-texto{
-
-    max-width:750px;
-
-    margin:auto;
-
-    font-size:18px;
-
-    line-height:2;
-
-    color:#ead8b9;
-}
-
-.intro-texto strong{
-
-    color:#f3dfb7;
-}
-
-.papas-intro{
-
-    margin-top:28px;
-
-    font-family:"Cinzel",serif;
-
-    color:#d8b46b;
-
-    font-size:20px;
-
-    letter-spacing:2px;
-}
-
-/* =========================
-   CUENTA REGRESIVA
-========================= */
-
-.cuenta{
-
-    background:rgba(27,16,9,.94);
-
-    text-align:center;
-}
-
-.contadores{
-
+.portada{
+    min-height:100vh;
     display:flex;
-
-    justify-content:center;
-
-    align-items:stretch;
-
-    gap:15px;
-
-    flex-wrap:wrap;
-
-    margin-top:40px;
-}
-
-.contador{
-
-    width:120px;
-
-    min-height:105px;
-
-    border:1px solid #8f6d3c;
-
-    background:rgba(0,0,0,.25);
-
-    padding:18px 10px;
-}
-
-.contador-numero{
-
-    display:block;
-
-    font-family:"Cinzel",serif;
-
-    font-size:38px;
-
-    color:#d9b56c;
-
-    line-height:1.2;
-}
-
-.contador-texto{
-
-    display:block;
-
-    margin-top:8px;
-
-    font-family:"Cinzel",serif;
-
-    font-size:10px;
-
-    letter-spacing:2px;
-
-    color:#d2c09f;
-}
-
-/* =========================
-   LINEA DEL TIEMPO
-========================= */
-
-.eventos{
-
-    background:rgba(31,18,10,.96);
-}
-
-.linea-tiempo{
-
-    max-width:750px;
-
-    margin:60px auto 0;
-
-    position:relative;
-
-    padding-left:45px;
-}
-
-.linea-tiempo::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:15px;
-
-    top:5px;
-
-    bottom:5px;
-
-    width:2px;
-
-    background:#b58b4c;
-}
-
-.evento{
-
-    position:relative;
-
-    margin-bottom:50px;
-}
-
-.evento:last-child{
-
-    margin-bottom:0;
-}
-
-.evento-icono{
-
-    position:absolute;
-
-    left:-47px;
-
-    top:0;
-
-    width:34px;
-
-    height:34px;
-
-    border-radius:50%;
-
-    border:2px solid #d5ac5e;
-
-    background:#28180d;
-
-    display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    font-size:15px;
-}
-
-.evento-hora{
-
-    font-family:"Cinzel",serif;
-
-    color:#d9b56c;
-
-    font-size:16px;
-
-    letter-spacing:3px;
-
-    margin-bottom:8px;
-}
-
-.evento-contenido{
-
-    border:1px solid rgba(211,170,92,.45);
+    text-align:center;
+    position:relative;
+    overflow:hidden;
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(91,57,30,.5),
-            rgba(28,16,9,.8)
-        );
+    linear-gradient(rgba(45,25,12,.35),rgba(45,25,12,.55)),
+    url("imagenes/pielvaca.jpg");
 
-    padding:25px;
+    background-size:cover;
+    background-position:center;
 }
 
-.evento-contenido h3{
-
-    font-family:"Cinzel",serif;
-
-    color:#f1dfbd;
-
-    font-size:24px;
-
-    letter-spacing:2px;
-
-    margin-bottom:12px;
+.portada-contenido{
+    background:rgba(245,232,207,.93);
+    padding:45px 30px;
+    border:3px solid #b18a4a;
+    box-shadow:0 10px 35px rgba(0,0,0,.35);
+    max-width:650px;
+    width:90%;
 }
 
-.lugar{
-
-    color:#f0dcb9;
-
-    font-size:17px;
-
-    margin-bottom:7px;
-}
-
-.direccion{
-
-    color:#bfae91;
-
+.portada small{
+    letter-spacing:4px;
+    text-transform:uppercase;
     font-size:14px;
+}
 
+.portada h1{
+    font-family:Georgia,serif;
+    font-size:60px;
+    margin:15px 0 5px;
+    color:#6b421f;
+}
+
+.portada h2{
+    margin:0 0 25px;
+    font-size:24px;
+    font-weight:normal;
+}
+
+.portada p{
+    font-size:18px;
     line-height:1.6;
 }
 
-.boton-mapa{
+.divisor{
+    width:100px;
+    height:2px;
+    background:#b18a4a;
+    margin:25px auto;
+}
 
+.boton{
     display:inline-block;
-
-    margin-top:18px;
-
-    padding:10px 18px;
-
-    border:1px solid #b99150;
-
-    color:#e4cc9f;
-
+    margin-top:20px;
+    padding:15px 30px;
+    background:#6b421f;
+    color:#fff;
     text-decoration:none;
+    border:none;
+    cursor:pointer;
+    font-family:Georgia,serif;
+    letter-spacing:2px;
+    font-size:15px;
+    box-shadow:0 5px 12px rgba(0,0,0,.2);
+}
 
-    font-family:"Cinzel",serif;
+.boton:hover{
+    background:#4b2c18;
+}
 
-    font-size:11px;
+/* INTRO */
 
+.intro{
+    text-align:center;
+    background:#f7efdf;
+}
+
+.intro h2{
+    font-size:36px;
+    color:#6b421f;
+}
+
+.intro p{
+    max-width:650px;
+    margin:20px auto;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* CUENTA REGRESIVA */
+
+.cuenta{
+    text-align:center;
+    background:#3b2416;
+    color:#f8edda;
+}
+
+.cuenta h2{
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+.contador{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.numero{
+    background:#f4ead8;
+    color:#3b2416;
+    width:100px;
+    padding:18px 10px;
+}
+
+.numero strong{
+    display:block;
+    font-size:32px;
+}
+
+.numero span{
+    font-size:12px;
+    text-transform:uppercase;
     letter-spacing:2px;
 }
 
-.boton-mapa:hover{
+/* TIMELINE */
 
-    background:#c29a55;
-
-    color:#24150b;
+.eventos{
+    background:#efe0c5;
 }
 
-/* =========================
-   DRESS CODE
-========================= */
-
-.dress-titulo{
-
-    color:#d7b264 !important;
+.eventos h2{
+    text-align:center;
+    font-size:38px;
+    color:#6b421f;
+    margin-bottom:50px;
 }
 
-.botas{
+.timeline{
+    position:relative;
+    max-width:700px;
+    margin:auto;
+}
 
+.timeline:before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:#b18a4a;
+    transform:translateX(-50%);
+}
+
+.evento{
+    position:relative;
+    width:50%;
+    padding:20px 35px;
+}
+
+.evento:nth-child(odd){
+    left:0;
+    text-align:right;
+}
+
+.evento:nth-child(even){
+    left:50%;
+    text-align:left;
+}
+
+.evento-contenido{
+    background:#fff8eb;
+    padding:25px;
+    border:1px solid #c5a46a;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+.evento-icono{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.hora{
+    font-size:26px;
+    color:#8a5b2d;
+    font-weight:bold;
+}
+
+.evento h3{
+    font-size:23px;
+    margin:10px 0;
+}
+
+.evento p{
+    line-height:1.6;
+}
+
+.mapa{
+    display:inline-block;
+    margin-top:10px;
+    color:#6b421f;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.dress-img{
+    width:100%;
+    max-width:230px;
+    margin-top:15px;
+}
+
+/* FOTOS */
+
+.fotos{
+    text-align:center;
+    background:#f7efdf;
+}
+
+.fotos h2{
+    font-size:38px;
+    color:#6b421f;
+}
+
+.foto-principal{
+    width:100%;
+    max-width:500px;
+    margin:25px auto;
     display:block;
-
-    width:170px;
-
-    max-width:80%;
-
-    margin:25px auto 15px;
+    border:8px solid #fff;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
 }
 
-.dress-texto{
+/* REGALO */
 
-    color:#d7c4a5;
+.regalo{
+    text-align:center;
+    background:#e7d1a9;
+}
 
+.regalo h2{
+    font-size:38px;
+    color:#6b421f;
+}
+
+.regalo p{
+    font-size:19px;
     line-height:1.8;
 }
 
-/* =========================
-   FOTO DE LUCAS
-========================= */
-
-.foto{
-
-    text-align:center;
-
-    background:rgba(37,22,12,.94);
-}
-
-.foto-lucas{
-
-    display:block;
-
-    width:420px;
-
-    max-width:90%;
-
-    margin:30px auto 0;
-
-    padding:7px;
-
-    border:1px solid #d3aa5c;
-
-    background:#24150b;
-
-    box-shadow:0 20px 45px rgba(0,0,0,.5);
-}
-
-/* =========================
-   REGALO
-========================= */
-
-.regalo{
-
-    text-align:center;
-
-    background:rgba(27,16,9,.96);
-}
-
-.regalo-caja{
-
-    max-width:650px;
-
-    margin:auto;
-
-    padding:38px 25px;
-
-    border:1px solid rgba(211,170,92,.4);
-
-    background:rgba(0,0,0,.2);
-}
-
-.regalo-caja h3{
-
-    font-family:"Cinzel",serif;
-
-    color:#d8b46b;
-
-    font-size:24px;
-
-    margin-bottom:20px;
-}
-
-.regalo-caja p{
-
-    color:#d9c6a7;
-
-    line-height:1.9;
-}
-
-/* =========================
-   CONFIRMACION
-========================= */
+/* CONFIRMACION */
 
 .confirmacion{
-
     text-align:center;
-
-    background:rgba(39,23,12,.95);
+    background:#3b2416;
+    color:#f7ead5;
 }
 
-.boton-whatsapp{
+.confirmacion h2{
+    font-size:38px;
+}
 
+.whatsapp{
     display:inline-block;
-
     margin-top:20px;
-
-    padding:16px 30px;
-
-    background:#b48a49;
-
-    color:#24150b;
-
+    padding:16px 28px;
+    background:#f4ead8;
+    color:#3b2416;
     text-decoration:none;
-
-    font-family:"Cinzel",serif;
-
-    letter-spacing:2px;
+    font-weight:bold;
 }
 
-.boton-whatsapp:hover{
-
-    background:#d5ad61;
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* PIE */
 
 footer{
-
     text-align:center;
-
-    padding:60px 20px;
-
-    background:#170c06;
+    padding:35px 20px;
+    background:#24150d;
+    color:#d9c3a0;
 }
 
-.footer-lucas{
-
-    font-family:"Cinzel",serif;
-
-    font-size:32px;
-
-    color:#d8b46b;
-
-    letter-spacing:5px;
+footer strong{
+    color:#fff0d0;
 }
 
-.footer-papas{
-
-    margin-top:15px;
-
-    color:#e1cfb0;
-
-    font-size:17px;
-}
-
-.footer-fecha{
-
-    margin-top:15px;
-
-    color:#a89473;
-
-    font-size:13px;
-
-    letter-spacing:3px;
-}
-
-/* =========================
-   BOTON DE MUSICA
-========================= */
+/* BOTON MUSICA */
 
 .boton-musica{
-
     position:fixed;
-
-    right:18px;
-
-    bottom:18px;
-
+    right:20px;
+    bottom:20px;
     width:55px;
-
     height:55px;
-
     border-radius:50%;
-
-    border:1px solid #d6ae60;
-
-    background:#27170c;
-
-    color:#d6ae60;
-
-    font-size:22px;
-
+    border:2px solid #e1c17a;
+    background:#5a351c;
+    color:#fff;
+    font-size:23px;
     cursor:pointer;
-
-    z-index:100;
+    z-index:9999;
+    box-shadow:0 5px 15px rgba(0,0,0,.35);
 }
 
-/* =========================
-   CELULAR
-========================= */
+/* MOVIL */
 
-@media(max-width:600px){
+@media(max-width:700px){
 
-    .calavera{
-
-        width:60px;
-
-        top:18px;
-
-        right:18px;
+    .portada h1{
+        font-size:45px;
     }
 
-    .pre-titulo{
-
-        font-size:10px;
-
-        letter-spacing:3px;
+    .portada h2{
+        font-size:20px;
     }
 
-    .papas-portada{
-
-        font-size:15px;
+    .timeline:before{
+        left:20px;
     }
 
-    .fecha-portada{
-
-        font-size:13px;
-    }
-
-    .titulo{
-
-        font-size:26px;
-    }
-
-    .subtitulo{
-
-        font-size:15px;
-    }
-
-    .contadores{
-
-        gap:8px;
+    .evento,
+    .evento:nth-child(odd),
+    .evento:nth-child(even){
+        width:100%;
+        left:0;
+        text-align:left;
+        padding-left:55px;
+        padding-right:0;
     }
 
     .contador{
-
-        width:76px;
-
-        min-height:90px;
-
-        padding:13px 5px;
+        gap:8px;
     }
 
-    .contador-numero{
-
-        font-size:25px;
+    .numero{
+        width:75px;
     }
 
-    .contador-texto{
-
-        font-size:8px;
-
-        letter-spacing:1px;
-    }
-
-    .linea-tiempo{
-
-        padding-left:30px;
-    }
-
-    .linea-tiempo::before{
-
-        left:9px;
-    }
-
-    .evento-icono{
-
-        left:-36px;
-
-        width:30px;
-
-        height:30px;
-
-        font-size:13px;
-    }
-
-    .evento-contenido{
-
-        padding:19px 15px;
-    }
-
-    .evento-contenido h3{
-
-        font-size:19px;
-    }
-
-    .evento-hora{
-
-        font-size:13px;
-    }
-
-    .footer-lucas{
-
+    .numero strong{
         font-size:25px;
     }
 
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- ==================================
-     PORTADA
-================================== -->
+<!-- MUSICA -->
+
+<audio id="musica" loop preload="auto">
+    <source src="./musica.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- PORTADA -->
 
 <section class="portada">
 
-    <img
-        src="imagenes/craneo.png"
-        class="calavera"
-        alt="Calavera vaquera"
-    >
-
     <div class="portada-contenido">
 
-        <div class="pre-titulo">
-            UNA CELEBRACIÓN MUY ESPECIAL
-        </div>
+        <small>Con mucho cariño</small>
 
-        <h1>
-            LUCAS<br>
-            IZAN
-        </h1>
+        <h1>Lucas Izan</h1>
 
-        <h2>
-            MIS 3 AÑOS
-        </h2>
+        <h2>¡Mis 3 años!</h2>
 
-        <div class="papas-portada">
+        <div class="divisor"></div>
 
-            Fátima Ordaz &amp; Daniel Fernández
+        <p>
+            Fátima Ordaz<br>
+            &<br>
+            Daniel Fernández
+        </p>
 
-            <small>
-                CON AMOR, SUS PAPÁS
-            </small>
+        <p>
+            Tenemos el honor de invitarte<br>
+            a celebrar este día tan especial.
+        </p>
 
-        </div>
-
-        <div class="fecha-portada">
-
-            14 · NOVIEMBRE · 2026
-
-        </div>
-
-
-        <!-- BOTON QUE ABRE LA INVITACION Y ACTIVA MUSICA -->
-
-        <button
-            class="boton-abrir"
-            onclick="abrirInvitacion()"
-        >
+        <button class="boton" onclick="abrirInvitacion()">
             ABRIR INVITACIÓN
         </button>
 
@@ -906,45 +433,61 @@ footer{
 </section>
 
 
+<!-- INTRO -->
 
-<!-- ==================================
-     INTRODUCCION
-================================== -->
-
-<section
-    class="seccion intro"
-    id="inicio"
->
+<section class="intro" id="inicio">
 
     <div class="contenedor">
 
-        <h2 class="titulo">
-            CON MUCHO CARIÑO
-        </h2>
+        <h2>¡Vamos a celebrar!</h2>
 
-        <p class="intro-texto">
+        <div class="divisor"></div>
 
-            <strong>
-                Fátima Ordaz y Daniel Fernández
-            </strong>
-
-            queremos celebrar junto a ustedes
-            los <strong>3 años</strong> de nuestro pequeño
-
-            <strong>
-                Lucas Izan
-            </strong>.
-
-            <br><br>
-
-            Será un día lleno de alegría,
-            familia y mucho espíritu vaquero.
-
+        <p>
+            Hay momentos que merecen ser celebrados
+            y queremos compartir contigo uno muy especial:
+            ¡los 3 años de nuestro pequeño Lucas Izan!
         </p>
 
-        <div class="papas-intro">
+        <p>
+            Prepárate para una tarde llena de diversión,
+            familia, amigos y mucho estilo vaquero.
+        </p>
 
-            Con mucho amor, sus papás.
+    </div>
+
+</section>
+
+
+<!-- CUENTA REGRESIVA -->
+
+<section class="cuenta">
+
+    <div class="contenedor">
+
+        <h2>Falta muy poco...</h2>
+
+        <div class="contador">
+
+            <div class="numero">
+                <strong id="dias">0</strong>
+                <span>Días</span>
+            </div>
+
+            <div class="numero">
+                <strong id="horas">0</strong>
+                <span>Horas</span>
+            </div>
+
+            <div class="numero">
+                <strong id="minutos">0</strong>
+                <span>Minutos</span>
+            </div>
+
+            <div class="numero">
+                <strong id="segundos">0</strong>
+                <span>Segundos</span>
+            </div>
 
         </div>
 
@@ -953,195 +496,78 @@ footer{
 </section>
 
 
+<!-- EVENTOS -->
 
-<!-- ==================================
-     CUENTA REGRESIVA
-================================== -->
-
-<section class="seccion cuenta">
+<section class="eventos">
 
     <div class="contenedor">
 
-        <h2 class="titulo">
-            FALTA POQUITO
-        </h2>
+        <h2>El gran día</h2>
 
-        <p class="subtitulo">
-            Estamos contando los días para celebrar contigo.
-        </p>
-
-
-        <div class="contadores">
-
-
-            <div class="contador">
-
-                <span
-                    class="contador-numero"
-                    id="dias"
-                >
-                    0
-                </span>
-
-                <span class="contador-texto">
-                    DÍAS
-                </span>
-
-            </div>
-
-
-            <div class="contador">
-
-                <span
-                    class="contador-numero"
-                    id="horas"
-                >
-                    0
-                </span>
-
-                <span class="contador-texto">
-                    HORAS
-                </span>
-
-            </div>
-
-
-            <div class="contador">
-
-                <span
-                    class="contador-numero"
-                    id="minutos"
-                >
-                    0
-                </span>
-
-                <span class="contador-texto">
-                    MINUTOS
-                </span>
-
-            </div>
-
-
-            <div class="contador">
-
-                <span
-                    class="contador-numero"
-                    id="segundos"
-                >
-                    0
-                </span>
-
-                <span class="contador-texto">
-                    SEGUNDOS
-                </span>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ==================================
-     LINEA DEL TIEMPO
-================================== -->
-
-<section class="seccion eventos">
-
-    <div class="contenedor">
-
-        <h2 class="titulo">
-            EL GRAN DÍA
-        </h2>
-
-        <p class="subtitulo">
-            Acompáñanos en cada momento de esta celebración.
-        </p>
-
-
-        <div class="linea-tiempo">
+        <div class="timeline">
 
 
             <!-- CEREMONIA -->
 
             <div class="evento">
 
-                <div class="evento-icono">
-                    ⛪
-                </div>
-
-                <div class="evento-hora">
-                    2:00 PM
-                </div>
-
                 <div class="evento-contenido">
 
-                    <h3>
-                        Ceremonia religiosa
-                    </h3>
+                    <div class="evento-icono">⛪</div>
 
-                    <p class="lugar">
-                        Parroquia Sr. de Esquipulas
+                    <div class="hora">2:00 PM</div>
+
+                    <h3>Ceremonia religiosa</h3>
+
+                    <p>
+                        <strong>Parroquia Sr. de Esquipulas</strong>
                     </p>
 
-                    <p class="direccion">
-                        Señor de Esquipulas 97,
-                        Arandas,
-                        36626 Irapuato, Gto.
+                    <p>
+                        Señor de Esquipulas 97<br>
+                        Arandas, 36626<br>
+                        Irapuato, Gto.
                     </p>
 
                     <a
-                        href="https://www.google.com/maps/search/?api=1&query=Parroquia+Sr.+de+Esquipulas,+Se%C3%B1or+de+Esquipulas+97,+Irapuato,+Guanajuato"
-                        target="_blank"
-                        class="boton-mapa"
-                    >
-                        VER UBICACIÓN
+                    class="mapa"
+                    href="https://www.google.com/maps/search/?api=1&query=Se%C3%B1or%20de%20Esquipulas%2097%2C%20Arandas%2C%2036626%20Irapuato%2C%20Gto."
+                    target="_blank">
+                        📍 Ver ubicación
                     </a>
 
                 </div>
 
             </div>
-
 
 
             <!-- RECEPCION -->
 
             <div class="evento">
 
-                <div class="evento-icono">
-                    🎉
-                </div>
-
-                <div class="evento-hora">
-                    3:30 PM
-                </div>
-
                 <div class="evento-contenido">
 
-                    <h3>
-                        Recepción
-                    </h3>
+                    <div class="evento-icono">🎉</div>
 
-                    <p class="lugar">
-                        Salón Cheyene
+                    <div class="hora">3:30 PM</div>
+
+                    <h3>Recepción</h3>
+
+                    <p>
+                        <strong>Salón Cheyene</strong>
                     </p>
 
-                    <p class="direccion">
-                        Blvrd Arandas 3675,
-                        Villas de Irapuato,
+                    <p>
+                        Blvrd Arandas 3675<br>
+                        Villas de Irapuato<br>
                         36821 Irapuato, Gto.
                     </p>
 
                     <a
-                        href="https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n+Cheyene,+Blvrd+Arandas+3675,+Villas+de+Irapuato,+Irapuato,+Guanajuato"
-                        target="_blank"
-                        class="boton-mapa"
-                    >
-                        VER UBICACIÓN
+                    class="mapa"
+                    href="https://www.google.com/maps/search/?api=1&query=Blvrd%20Arandas%203675%2C%20Villas%20de%20Irapuato%2C%2036821%20Irapuato%2C%20Gto."
+                    target="_blank">
+                        📍 Ver ubicación
                     </a>
 
                 </div>
@@ -1149,44 +575,27 @@ footer{
             </div>
 
 
-
             <!-- DRESS CODE -->
 
             <div class="evento">
 
-                <div class="evento-icono">
-                    🤠
-                </div>
-
-                <div class="evento-hora">
-                    DRESS CODE
-                </div>
-
                 <div class="evento-contenido">
 
-                    <h3 class="dress-titulo">
-                        VAQUERO / COWBOY
-                    </h3>
+                    <div class="evento-icono">🤠</div>
 
-                    <p class="dress-texto">
+                    <div class="hora">DRESS CODE</div>
 
-                        Prepárate para vivir una celebración
-                        con todo el estilo del viejo oeste.
+                    <h3>Vaquero / Cowboy</h3>
 
+                    <p>
+                        Ponte tus botas, sombrero y tu mejor
+                        estilo vaquero para acompañarnos.
                     </p>
 
                     <img
-                        src="imagenes/botas.png"
-                        class="botas"
-                        alt="Botas vaqueras"
-                    >
-
-                    <p class="dress-texto">
-
-                        Sombreros, botas, mezclilla y mucho
-                        espíritu vaquero son bienvenidos.
-
-                    </p>
+                    src="imagenes/botas.png"
+                    class="dress-img"
+                    alt="Botas vaqueras">
 
                 </div>
 
@@ -1200,101 +609,74 @@ footer{
 </section>
 
 
+<!-- FOTO -->
 
-<!-- ==================================
-     FOTO DE LUCAS
-================================== -->
-
-<section class="seccion foto">
+<section class="fotos">
 
     <div class="contenedor">
 
-        <h2 class="titulo">
-            NUESTRO PEQUEÑO COWBOY
-        </h2>
+        <h2>Lucas Izan</h2>
 
-        <p class="subtitulo">
-            El protagonista de esta gran aventura.
-        </p>
+        <div class="divisor"></div>
 
         <img
-            src="imagenes/lucas.jpeg"
-            class="foto-lucas"
-            alt="Lucas Izan"
-        >
+        src="imagenes/lucas.jpeg"
+        class="foto-principal"
+        alt="Lucas Izan">
+
+        <p>
+            ¡Te esperamos para celebrar juntos!
+        </p>
 
     </div>
 
 </section>
 
 
+<!-- REGALO -->
 
-<!-- ==================================
-     REGALO
-================================== -->
-
-<section class="seccion regalo">
+<section class="regalo">
 
     <div class="contenedor">
 
-        <h2 class="titulo">
-            UN DETALLE CON MUCHO CARIÑO
-        </h2>
+        <h2>Tu presencia es el mejor regalo</h2>
 
-        <div class="regalo-caja">
+        <div class="divisor"></div>
 
-            <h3>
-                Tu presencia es suficiente
-            </h3>
+        <p>
+            Lo más importante para nosotros es compartir
+            este día contigo.
+        </p>
 
-            <p>
-
-                Lo más importante para nosotros
-                es compartir este día contigo.
-
-                <br><br>
-
-                Si deseas tener un detalle con Lucas,
-                puedes hacerlo en un sobre.
-
-            </p>
-
-        </div>
+        <p>
+            Si deseas obsequiarle algo a Lucas,
+            tendremos un espacio para sobres.
+        </p>
 
     </div>
 
 </section>
 
 
+<!-- CONFIRMACION -->
 
-<!-- ==================================
-     CONFIRMACION
-================================== -->
-
-<section class="seccion confirmacion">
+<section class="confirmacion">
 
     <div class="contenedor">
 
-        <h2 class="titulo">
-            ¿NOS ACOMPAÑAS?
-        </h2>
+        <h2>¿Nos acompañas?</h2>
 
-        <p class="subtitulo">
-
-            Ayúdanos confirmando tu asistencia.
-
-            <br>
-
-            ¡Será un gusto celebrar contigo!
-
+        <p>
+            Confirma tu asistencia por WhatsApp.
         </p>
 
         <a
-            href="https://wa.me/525548571323?text=Hola%20Quiero%20confirmar%20mi%20asistencia%20a%20los%203%20a%C3%B1os%20de%20Lucas%20Izan."
-            target="_blank"
-            class="boton-whatsapp"
-        >
-            CONFIRMAR POR WHATSAPP
+        class="whatsapp"
+        href="https://wa.me/525548571323?text=Hola%20Quiero%20confirmar%20mi%20asistencia%20a%20los%203%20a%C3%B1os%20de%20Lucas%20Izan."
+        target="_blank">
+
+            💬 CONFIRMAR ASISTENCIA
+
         </a>
 
     </div>
@@ -1302,288 +684,214 @@ footer{
 </section>
 
 
-
-<!-- ==================================
-     FOOTER
-================================== -->
+<!-- PIE -->
 
 <footer>
 
-    <div class="footer-lucas">
-        LUCAS IZAN
-    </div>
+    <p>
+        Con cariño,
+    </p>
 
-    <div class="footer-papas">
-        Fátima Ordaz &amp; Daniel Fernández
-    </div>
+    <strong>
+        Fátima Ordaz & Daniel Fernández
+    </strong>
 
-    <div class="footer-fecha">
-        14 · NOVIEMBRE · 2026
-    </div>
+    <p>
+        Celebrando los 3 años de Lucas Izan 🤎
+    </p>
 
 </footer>
 
 
-
-<!-- ==================================
-     MUSICA
-================================== -->
-
-<audio
-    id="musica"
-    loop
-    preload="auto"
->
-
-    <source
-        src="musica.mp3"
-        type="audio/mpeg"
-    >
-
-</audio>
-
-
-<!-- BOTON FLOTANTE -->
+<!-- BOTON DE MUSICA -->
 
 <button
-    class="boton-musica"
-    id="botonMusica"
-    onclick="reproducirMusica()"
-    aria-label="Reproducir o pausar música"
->
-    ♪
-</button>
+class="boton-musica"
+id="botonMusica"
+onclick="reproducirMusica()">
 
+    ♪
+
+</button>
 
 
 <script>
 
-/* ==================================
-   CUENTA REGRESIVA
-================================== */
+/* ==========================
+   MUSICA
+========================== */
 
-function actualizarCuenta(){
-
-    var fechaEvento =
-        new Date("2026-11-14T14:00:00-06:00").getTime();
-
-    var ahora =
-        new Date().getTime();
-
-    var diferencia =
-        fechaEvento - ahora;
+var musica = document.getElementById("musica");
+var botonMusica = document.getElementById("botonMusica");
 
 
-    if(diferencia <= 0){
+function actualizarBoton(){
 
-        document.getElementById("dias").innerHTML = "0";
+    if(musica.paused){
 
-        document.getElementById("horas").innerHTML = "0";
+        botonMusica.innerHTML = "♪";
 
-        document.getElementById("minutos").innerHTML = "0";
+    }else{
 
-        document.getElementById("segundos").innerHTML = "0";
+        botonMusica.innerHTML = "❚❚";
 
-        return;
     }
-
-
-    var dias =
-        Math.floor(
-            diferencia /
-            (1000 * 60 * 60 * 24)
-        );
-
-
-    var horas =
-        Math.floor(
-            (diferencia %
-            (1000 * 60 * 60 * 24))
-            /
-            (1000 * 60 * 60)
-        );
-
-
-    var minutos =
-        Math.floor(
-            (diferencia %
-            (1000 * 60 * 60))
-            /
-            (1000 * 60)
-        );
-
-
-    var segundos =
-        Math.floor(
-            (diferencia %
-            (1000 * 60))
-            /
-            1000
-        );
-
-
-    document.getElementById("dias").innerHTML =
-        dias;
-
-    document.getElementById("horas").innerHTML =
-        horas;
-
-    document.getElementById("minutos").innerHTML =
-        minutos;
-
-    document.getElementById("segundos").innerHTML =
-        segundos;
 
 }
 
 
-actualizarCuenta();
-
-
-setInterval(
-    actualizarCuenta,
-    1000
-);
-
-
-
-/* ==================================
-   VARIABLES DE MUSICA
-================================== */
-
-var musica =
-    document.getElementById("musica");
-
-var reproduciendo =
-    false;
-
-
-
-/* ==================================
-   ABRIR INVITACION
-   + INICIAR MUSICA
-================================== */
+/* ABRIR INVITACION */
 
 function abrirInvitacion(){
 
-    /* Intentar reproducir la música */
+    /*
+       Forzamos la ruta del archivo
+       para asegurarnos de que GitHub Pages
+       encuentre musica.mp3
+    */
 
-    musica.play()
-        .then(function(){
+    musica.src = "./musica.mp3";
 
-            reproduciendo = true;
+    musica.load();
 
-            document.getElementById(
-                "botonMusica"
-            ).innerHTML = "❚❚";
+    var promesa = musica.play();
 
-        })
-        .catch(function(){
+    if(promesa !== undefined){
 
-            console.log(
-                "La música no pudo iniciar."
-            );
+        promesa.then(function(){
+
+            botonMusica.innerHTML = "❚❚";
+
+        }).catch(function(error){
+
+            console.log("Error al reproducir:", error);
 
         });
 
+    }
 
-    /* Bajar a la invitación */
-
-    document.getElementById(
-        "inicio"
-    ).scrollIntoView({
+    document.getElementById("inicio").scrollIntoView({
         behavior:"smooth"
     });
 
 }
 
 
-
-/* ==================================
-   BOTON MUSICA
-================================== */
+/* BOTON DE MUSICA */
 
 function reproducirMusica(){
 
-    if(!musica){
+    if(musica.paused){
 
-        return;
+        musica.src = "./musica.mp3";
 
-    }
+        musica.play()
+        .then(function(){
 
+            botonMusica.innerHTML = "❚❚";
 
-    if(reproduciendo){
+        })
+        .catch(function(error){
+
+            console.log("Error al reproducir:", error);
+
+            alert(
+                "No se pudo reproducir la música. " +
+                "Verifica el volumen de tu dispositivo."
+            );
+
+        });
+
+    }else{
 
         musica.pause();
 
-        reproduciendo = false;
-
-        document.getElementById(
-            "botonMusica"
-        ).innerHTML = "♪";
-
-    }
-
-    else{
-
-        musica.play()
-            .then(function(){
-
-                reproduciendo = true;
-
-                document.getElementById(
-                    "botonMusica"
-                ).innerHTML = "❚❚";
-
-            })
-
-            .catch(function(){
-
-                alert(
-                    "No se pudo reproducir la música. Revisa que musica.mp3 esté en la página principal del repositorio."
-                );
-
-            });
+        botonMusica.innerHTML = "♪";
 
     }
 
 }
 
 
-/* ==================================
-   CUANDO TERMINA / PAUSA
-================================== */
+/* ACTUALIZAR BOTON */
 
-musica.addEventListener(
-    "pause",
-    function(){
+musica.addEventListener("play", function(){
 
-        reproduciendo = false;
+    botonMusica.innerHTML = "❚❚";
 
-        document.getElementById(
-            "botonMusica"
-        ).innerHTML = "♪";
+});
+
+
+musica.addEventListener("pause", function(){
+
+    botonMusica.innerHTML = "♪";
+
+});
+
+
+/* ==========================
+   CUENTA REGRESIVA
+========================== */
+
+var fechaEvento = new Date("November 14, 2026 14:00:00").getTime();
+
+
+function actualizarCuenta(){
+
+    var ahora = new Date().getTime();
+
+    var diferencia = fechaEvento - ahora;
+
+
+    if(diferencia <= 0){
+
+        document.getElementById("dias").innerHTML = "0";
+        document.getElementById("horas").innerHTML = "0";
+        document.getElementById("minutos").innerHTML = "0";
+        document.getElementById("segundos").innerHTML = "0";
+
+        return;
 
     }
-);
 
 
-musica.addEventListener(
-    "play",
-    function(){
+    var dias = Math.floor(
+        diferencia / (1000 * 60 * 60 * 24)
+    );
 
-        reproduciendo = true;
+    var horas = Math.floor(
+        (diferencia % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+    );
 
-        document.getElementById(
-            "botonMusica"
-        ).innerHTML = "❚❚";
+    var minutos = Math.floor(
+        (diferencia % (1000 * 60 * 60))
+        / (1000 * 60)
+    );
 
-    }
-);
+    var segundos = Math.floor(
+        (diferencia % (1000 * 60))
+        / 1000
+    );
+
+
+    document.getElementById("dias").innerHTML = dias;
+
+    document.getElementById("horas").innerHTML = horas;
+
+    document.getElementById("minutos").innerHTML = minutos;
+
+    document.getElementById("segundos").innerHTML = segundos;
+
+}
+
+
+actualizarCuenta();
+
+setInterval(actualizarCuenta,1000);
 
 </script>
 
 
 </body>
-
 </html>
