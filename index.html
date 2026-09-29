@@ -10,14 +10,14 @@
 
 
 <!-- =====================================================
-     VISTA PREVIA AL COMPARTIR EN WHATSAPP / FACEBOOK
+     VISTA PREVIA AL COMPARTIR
 ===================================================== -->
 
 <meta property="og:title" content="🤠 Lucas Izan | Mis 3 años">
 
 <meta property="og:description" content="Nuestro pequeño vaquero cumple 3 años. Te esperamos el sábado 14 de noviembre de 2026 para celebrar juntos. 🤎🐎">
 
-<meta property="og:image" content="https://nata-7-pixel.github.io/Invitacion-Lucas-2026/imagenes/imagenes-lucas-renombradas/lucas-sombrero.png">
+<meta property="og:image" content="https://nata-7-pixel.github.io/Invitacion-Lucas-2026/imagenes/imagenes-lucas-renombradas/mama-lucas.png">
 
 <meta property="og:url" content="https://nata-7-pixel.github.io/Invitacion-Lucas-2026/">
 
@@ -26,11 +26,11 @@
 <meta property="og:site_name" content="Invitación Lucas Izan">
 
 
-<!-- =====================================================
-     ESTILOS
-===================================================== -->
-
 <style>
+
+/* =====================================================
+   PALETA
+===================================================== */
 
 :root{
     --cafe:#3b2416;
@@ -44,6 +44,11 @@
     --blanco:#fffaf0;
     --texto:#3a281b;
 }
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
 
 *{
     box-sizing:border-box;
@@ -93,26 +98,10 @@ section{
     letter-spacing:8px;
 }
 
-.ornamento-linea{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-    margin:25px auto;
-    max-width:300px;
-}
-
-.ornamento-linea::before,
-.ornamento-linea::after{
-    content:"";
-    height:1px;
-    flex:1;
-    background:var(--dorado);
-}
-
 
 /* =====================================================
    PORTADA
+   FOTO DE MAMÁ + LUCAS
 ===================================================== */
 
 .portada{
@@ -132,17 +121,23 @@ section{
     background:var(--cafe-oscuro);
 }
 
+
+/* FOTO DE PORTADA */
+
 .portada-fondo{
 
     position:absolute;
+
     inset:0;
 
     background-image:
+
     linear-gradient(
         rgba(30,15,7,.12),
         rgba(30,15,7,.72)
     ),
-    url("imagenes/imagenes-lucas-renombradas/familia-caballo.png");
+
+    url("imagenes/imagenes-lucas-renombradas/mama-lucas.png");
 
     background-size:cover;
 
@@ -151,16 +146,21 @@ section{
     transform:scale(1.03);
 }
 
+
+/* TEXTURA */
+
 .portada::after{
 
     content:"";
 
     position:absolute;
+
     inset:0;
 
     pointer-events:none;
 
     background:
+
     repeating-linear-gradient(
         90deg,
         rgba(255,255,255,.015) 0,
@@ -172,9 +172,13 @@ section{
     opacity:.35;
 }
 
+
+/* MARCO */
+
 .portada-marco{
 
     position:relative;
+
     z-index:2;
 
     width:min(92%,650px);
@@ -186,6 +190,7 @@ section{
     color:var(--blanco);
 
     background:
+
     linear-gradient(
         145deg,
         rgba(55,29,15,.82),
@@ -195,13 +200,16 @@ section{
     border:1px solid var(--dorado);
 
     box-shadow:
+
     0 20px 70px rgba(0,0,0,.55),
+
     inset 0 0 0 1px rgba(255,255,255,.08);
 
     backdrop-filter:blur(2px);
 
     animation:entrada .9s ease both;
 }
+
 
 .portada-marco::before,
 .portada-marco::after{
@@ -216,14 +224,19 @@ section{
 }
 
 .portada-marco::before{
+
     top:13px;
+
     left:17px;
 }
 
 .portada-marco::after{
+
     bottom:13px;
+
     right:17px;
 }
+
 
 .portada-pretexto{
 
@@ -237,6 +250,7 @@ section{
 
     letter-spacing:5px;
 }
+
 
 .portada h1{
 
@@ -254,6 +268,7 @@ section{
     0 5px 20px rgba(0,0,0,.6);
 }
 
+
 .portada-linea{
 
     width:100px;
@@ -265,6 +280,7 @@ section{
     background:var(--dorado-claro);
 }
 
+
 .portada-edad{
 
     margin:0;
@@ -275,6 +291,7 @@ section{
 
     letter-spacing:5px;
 }
+
 
 .portada-edad span{
 
@@ -289,6 +306,7 @@ section{
     letter-spacing:0;
 }
 
+
 .portada-padres{
 
     margin:25px 0 15px;
@@ -298,12 +316,14 @@ section{
     letter-spacing:2px;
 }
 
+
 .portada-padres span{
 
     padding:0 10px;
 
     color:var(--dorado-claro);
 }
+
 
 .portada-invitacion{
 
@@ -318,6 +338,7 @@ section{
     line-height:1.7;
 }
 
+
 .portada-fecha{
 
     margin:25px 0 0;
@@ -328,6 +349,9 @@ section{
 
     letter-spacing:3px;
 }
+
+
+/* BOTÓN */
 
 .boton{
 
@@ -346,9 +370,12 @@ section{
     font-weight:bold;
 
     transition:
+
     transform .3s ease,
+
     box-shadow .3s ease;
 }
+
 
 .boton-portada{
 
@@ -364,6 +391,7 @@ section{
     0 8px 20px rgba(0,0,0,.3);
 }
 
+
 .boton-portada:hover{
 
     transform:translateY(-3px);
@@ -374,7 +402,7 @@ section{
 
 
 /* =====================================================
-   FOTOS
+   FOTOS GRANDES
 ===================================================== */
 
 .foto-seccion{
@@ -388,6 +416,7 @@ section{
     background:var(--cafe);
 }
 
+
 .foto-full{
 
     width:100%;
@@ -396,6 +425,7 @@ section{
 
     height:auto;
 }
+
 
 .foto-overlay{
 
@@ -416,11 +446,13 @@ section{
     color:white;
 
     background:
+
     linear-gradient(
         transparent 45%,
         rgba(25,12,5,.78)
     );
 }
+
 
 .foto-overlay h2{
 
@@ -448,14 +480,17 @@ section{
     text-align:center;
 
     background:
+
     linear-gradient(
         rgba(247,239,223,.96),
         rgba(247,239,223,.96)
     ),
+
     url("imagenes/pielvaca.jpg");
 
     background-size:cover;
 }
+
 
 .intro::before{
 
@@ -470,6 +505,7 @@ section{
     font-size:25px;
 }
 
+
 .intro h2{
 
     margin:0;
@@ -480,6 +516,7 @@ section{
 
     font-weight:normal;
 }
+
 
 .intro p{
 
@@ -494,7 +531,7 @@ section{
 
 
 /* =====================================================
-   MENSAJE LUCAS
+   MENSAJE DE LUCAS
 ===================================================== */
 
 .mensaje-lucas{
@@ -506,14 +543,17 @@ section{
     color:var(--blanco);
 
     background:
+
     linear-gradient(
         rgba(45,23,11,.90),
         rgba(45,23,11,.94)
     ),
+
     url("imagenes/pielvaca.jpg");
 
     background-size:cover;
 }
+
 
 .mensaje-lucas .numero{
 
@@ -528,6 +568,7 @@ section{
     letter-spacing:5px;
 }
 
+
 .mensaje-lucas h2{
 
     max-width:750px;
@@ -540,6 +581,7 @@ section{
 
     line-height:1.25;
 }
+
 
 .mensaje-lucas p{
 
@@ -564,6 +606,7 @@ section{
     background:var(--cafe);
 }
 
+
 .cuenta h2{
 
     margin:0;
@@ -573,12 +616,14 @@ section{
     font-weight:normal;
 }
 
+
 .cuenta-sub{
 
     color:#d9c09a;
 
     margin:15px 0 30px;
 }
+
 
 .contador{
 
@@ -590,6 +635,7 @@ section{
 
     gap:12px;
 }
+
 
 .numero-contador{
 
@@ -604,12 +650,14 @@ section{
     border:1px solid var(--dorado);
 }
 
+
 .numero-contador strong{
 
     display:block;
 
     font-size:32px;
 }
+
 
 .numero-contador span{
 
@@ -636,6 +684,7 @@ section{
     background:#2c180d;
 }
 
+
 .foto-familia h2{
 
     margin:0;
@@ -644,6 +693,7 @@ section{
 
     font-weight:normal;
 }
+
 
 .foto-familia img{
 
@@ -669,14 +719,17 @@ section{
 .eventos{
 
     background:
+
     linear-gradient(
         rgba(234,216,184,.96),
         rgba(234,216,184,.96)
     ),
+
     url("imagenes/pielvaca.jpg");
 
     background-size:cover;
 }
+
 
 .eventos h2{
 
@@ -691,6 +744,7 @@ section{
     font-weight:normal;
 }
 
+
 .timeline{
 
     max-width:850px;
@@ -699,6 +753,7 @@ section{
 
     position:relative;
 }
+
 
 .timeline::before{
 
@@ -719,6 +774,7 @@ section{
     transform:translateX(-50%);
 }
 
+
 .evento{
 
     width:50%;
@@ -728,6 +784,7 @@ section{
     padding:18px 40px;
 }
 
+
 .evento:nth-child(odd){
 
     left:0;
@@ -735,12 +792,14 @@ section{
     text-align:right;
 }
 
+
 .evento:nth-child(even){
 
     left:50%;
 
     text-align:left;
 }
+
 
 .evento-contenido{
 
@@ -756,6 +815,7 @@ section{
     0 10px 25px rgba(61,36,18,.12);
 }
 
+
 .evento-contenido::before{
 
     content:"✦";
@@ -769,11 +829,13 @@ section{
     font-size:12px;
 }
 
+
 .evento:nth-child(odd)
 .evento-contenido::before{
 
     left:15px;
 }
+
 
 .evento:nth-child(even)
 .evento-contenido::before{
@@ -781,10 +843,12 @@ section{
     right:15px;
 }
 
+
 .evento-icono{
 
     font-size:32px;
 }
+
 
 .hora{
 
@@ -797,6 +861,7 @@ section{
     font-weight:bold;
 }
 
+
 .evento h3{
 
     margin:10px 0;
@@ -806,10 +871,12 @@ section{
     font-size:22px;
 }
 
+
 .evento p{
 
     line-height:1.7;
 }
+
 
 .mapa{
 
@@ -823,6 +890,7 @@ section{
 
     font-weight:bold;
 }
+
 
 .dress-img{
 
@@ -847,6 +915,7 @@ section{
     background:var(--crema);
 }
 
+
 .lucas-destacado h2{
 
     margin:0;
@@ -858,12 +927,14 @@ section{
     font-weight:normal;
 }
 
+
 .lucas-destacado p{
 
     color:#755638;
 
     font-size:18px;
 }
+
 
 .lucas-destacado img{
 
@@ -893,14 +964,17 @@ section{
     color:var(--blanco);
 
     background:
+
     linear-gradient(
         rgba(39,21,12,.95),
         rgba(39,21,12,.95)
     ),
+
     url("imagenes/pielvaca.jpg");
 
     background-size:cover;
 }
+
 
 .galeria-titulo{
 
@@ -908,6 +982,7 @@ section{
 
     margin-bottom:50px;
 }
+
 
 .galeria-titulo h2{
 
@@ -918,6 +993,7 @@ section{
     font-weight:normal;
 }
 
+
 .galeria-titulo p{
 
     color:#d9c09a;
@@ -926,6 +1002,7 @@ section{
 
     line-height:1.7;
 }
+
 
 .album{
 
@@ -937,6 +1014,7 @@ section{
 
     column-gap:22px;
 }
+
 
 .album-item{
 
@@ -960,27 +1038,35 @@ section{
     0 12px 30px rgba(0,0,0,.35);
 
     transition:
+
     transform .35s ease,
+
     box-shadow .35s ease;
 }
 
+
 .album-item:hover{
 
-    transform:translateY(-5px) rotate(-.3deg);
+    transform:
+    translateY(-5px)
+    rotate(-.3deg);
 
     box-shadow:
     0 18px 40px rgba(0,0,0,.45);
 }
+
 
 .album-item:nth-child(2n){
 
     transform:rotate(.5deg);
 }
 
+
 .album-item:nth-child(3n){
 
     transform:rotate(-.4deg);
 }
+
 
 .album-item img{
 
@@ -990,6 +1076,7 @@ section{
 
     height:auto;
 }
+
 
 .album-caption{
 
@@ -1010,6 +1097,7 @@ section{
     text-align:center;
 
     background:
+
     linear-gradient(
         transparent,
         rgba(35,18,9,.75)
@@ -1030,6 +1118,7 @@ section{
     position:relative;
 }
 
+
 .regalo h2{
 
     margin:0;
@@ -1040,6 +1129,7 @@ section{
 
     font-weight:normal;
 }
+
 
 .regalo p{
 
@@ -1066,14 +1156,17 @@ section{
     text-align:center;
 
     background:
+
     linear-gradient(
         rgba(38,20,11,.94),
         rgba(38,20,11,.94)
     ),
+
     url("imagenes/pielvaca.jpg");
 
     background-size:cover;
 }
+
 
 .confirmacion-card{
 
@@ -1086,6 +1179,7 @@ section{
     color:var(--blanco);
 
     background:
+
     linear-gradient(
         145deg,
         rgba(72,40,20,.94),
@@ -1102,6 +1196,7 @@ section{
     0 20px 50px rgba(0,0,0,.45);
 }
 
+
 .confirmacion-card .herradura{
 
     font-size:38px;
@@ -1110,6 +1205,7 @@ section{
 
     color:var(--dorado-claro);
 }
+
 
 .confirmacion-card h2{
 
@@ -1120,6 +1216,7 @@ section{
     font-weight:normal;
 }
 
+
 .confirmacion-card p{
 
     color:#e8d4b1;
@@ -1128,6 +1225,7 @@ section{
 
     line-height:1.7;
 }
+
 
 .whatsapp{
 
@@ -1148,9 +1246,12 @@ section{
     letter-spacing:1px;
 
     transition:
+
     transform .3s ease,
+
     background .3s ease;
 }
+
 
 .whatsapp:hover{
 
@@ -1174,6 +1275,7 @@ footer{
 
     background:var(--cafe-oscuro);
 }
+
 
 footer strong{
 
@@ -1218,6 +1320,7 @@ footer strong{
     transform .25s ease;
 }
 
+
 .boton-musica:hover{
 
     transform:scale(1.08);
@@ -1235,9 +1338,12 @@ footer strong{
     transform:translateY(35px);
 
     transition:
+
     opacity .8s ease,
+
     transform .8s ease;
 }
+
 
 .animar.visible{
 
@@ -1245,6 +1351,7 @@ footer strong{
 
     transform:translateY(0);
 }
+
 
 @keyframes entrada{
 
@@ -1267,6 +1374,7 @@ footer strong{
         scale(1);
 
     }
+
 }
 
 
@@ -1282,6 +1390,7 @@ footer strong{
 
     }
 
+
     .portada{
 
         min-height:100svh;
@@ -1290,11 +1399,13 @@ footer strong{
 
     }
 
+
     .portada-fondo{
 
-        background-position:55% center;
+        background-position:center;
 
     }
+
 
     .portada-marco{
 
@@ -1304,6 +1415,7 @@ footer strong{
 
     }
 
+
     .portada-pretexto{
 
         font-size:8px;
@@ -1312,11 +1424,13 @@ footer strong{
 
     }
 
+
     .portada h1{
 
         font-size:46px;
 
     }
+
 
     .portada-edad{
 
@@ -1326,11 +1440,13 @@ footer strong{
 
     }
 
+
     .portada-edad span{
 
         font-size:36px;
 
     }
+
 
     .portada-padres{
 
@@ -1340,11 +1456,13 @@ footer strong{
 
     }
 
+
     .portada-invitacion{
 
         font-size:14px;
 
     }
+
 
     .portada-fecha{
 
@@ -1354,6 +1472,7 @@ footer strong{
 
     }
 
+
     .boton-portada{
 
         width:100%;
@@ -1361,6 +1480,7 @@ footer strong{
         max-width:250px;
 
     }
+
 
     .foto-overlay{
 
@@ -1370,17 +1490,20 @@ footer strong{
 
     }
 
+
     .foto-overlay h2{
 
         font-size:26px;
 
     }
 
+
     .timeline::before{
 
         left:18px;
 
     }
+
 
     .evento,
     .evento:nth-child(odd),
@@ -1397,11 +1520,13 @@ footer strong{
 
     }
 
+
     .evento-contenido{
 
         padding:25px 20px;
 
     }
+
 
     .numero-contador{
 
@@ -1411,11 +1536,13 @@ footer strong{
 
     }
 
+
     .numero-contador strong{
 
         font-size:25px;
 
     }
+
 
     .numero-contador span{
 
@@ -1425,11 +1552,13 @@ footer strong{
 
     }
 
+
     .album{
 
         columns:1;
 
     }
+
 
     .album-item,
     .album-item:nth-child(2n),
@@ -1439,17 +1568,20 @@ footer strong{
 
     }
 
+
     .confirmacion-card{
 
         padding:42px 20px;
 
     }
 
+
     .whatsapp{
 
         width:100%;
 
     }
+
 
     .boton-musica{
 
@@ -1504,15 +1636,19 @@ preload="auto">
             ✦
         </div>
 
+
         <p class="portada-pretexto">
             UNA CELEBRACIÓN MUY ESPECIAL
         </p>
+
 
         <h1>
             Lucas Izan
         </h1>
 
+
         <div class="portada-linea"></div>
+
 
         <p class="portada-edad">
 
@@ -1526,6 +1662,7 @@ preload="auto">
 
         </p>
 
+
         <p class="portada-padres">
 
             Fátima Ordaz
@@ -1538,6 +1675,7 @@ preload="auto">
 
         </p>
 
+
         <p class="portada-invitacion">
 
             Tenemos el honor de invitarte<br>
@@ -1547,11 +1685,13 @@ preload="auto">
 
         </p>
 
+
         <p class="portada-fecha">
 
             SÁBADO · 14 · NOVIEMBRE · 2026
 
         </p>
+
 
         <button
         class="boton boton-portada"
@@ -1567,7 +1707,7 @@ preload="auto">
 
 
 <!-- =====================================================
-     FOTO FAMILIAR
+     FOTO
 ===================================================== -->
 
 <section class="foto-seccion">
@@ -1576,6 +1716,7 @@ preload="auto">
     src="imagenes/imagenes-lucas-renombradas/familia-caballo.png"
     class="foto-full animar"
     alt="Lucas y su familia a caballo">
+
 
     <div class="foto-overlay">
 
@@ -1600,11 +1741,14 @@ preload="auto">
             ✦
         </div>
 
+
         <h2>
             ¡Vamos a celebrar!
         </h2>
 
+
         <div class="divisor"></div>
+
 
         <p>
 
@@ -1613,6 +1757,7 @@ preload="auto">
 
         </p>
 
+
         <p>
 
             <strong>
@@ -1620,6 +1765,7 @@ preload="auto">
             </strong>
 
         </p>
+
 
         <p>
 
@@ -1644,6 +1790,7 @@ preload="auto">
     class="foto-full animar"
     alt="Mamá y Lucas">
 
+
     <div class="foto-overlay">
 
         <h2>
@@ -1667,13 +1814,16 @@ preload="auto">
             TRES AÑOS DE AVENTURAS
         </span>
 
+
         <div class="ornamento">
             ✦ ✦ ✦
         </div>
 
+
         <h2>
             Nuestro pequeño vaquero cumple 3 años
         </h2>
+
 
         <p>
             Y queremos celebrarlo rodeados
@@ -1697,11 +1847,14 @@ preload="auto">
             Falta muy poco...
         </h2>
 
+
         <p class="cuenta-sub">
             Nos vemos el 14 de noviembre de 2026
         </p>
 
+
         <div class="contador">
+
 
             <div class="numero-contador">
 
@@ -1715,6 +1868,7 @@ preload="auto">
 
             </div>
 
+
             <div class="numero-contador">
 
                 <strong id="horas">
@@ -1726,6 +1880,7 @@ preload="auto">
                 </span>
 
             </div>
+
 
             <div class="numero-contador">
 
@@ -1739,6 +1894,7 @@ preload="auto">
 
             </div>
 
+
             <div class="numero-contador">
 
                 <strong id="segundos">
@@ -1750,6 +1906,7 @@ preload="auto">
                 </span>
 
             </div>
+
 
         </div>
 
@@ -1770,11 +1927,14 @@ preload="auto">
             ✦
         </div>
 
+
         <h2>
             Los que hacen este día especial
         </h2>
 
+
         <div class="divisor"></div>
+
 
         <img
         src="imagenes/imagenes-lucas-renombradas/familia-lucas.png"
@@ -1805,6 +1965,8 @@ preload="auto">
         <div class="timeline">
 
 
+            <!-- CEREMONIA -->
+
             <div class="evento animar">
 
                 <div class="evento-contenido">
@@ -1813,13 +1975,16 @@ preload="auto">
                         ⛪
                     </div>
 
+
                     <div class="hora">
                         2:00 PM
                     </div>
 
+
                     <h3>
                         Ceremonia religiosa
                     </h3>
+
 
                     <p>
 
@@ -1828,6 +1993,7 @@ preload="auto">
                         </strong>
 
                     </p>
+
 
                     <p>
 
@@ -1838,6 +2004,7 @@ preload="auto">
                         Irapuato, Gto.
 
                     </p>
+
 
                     <a
                     class="mapa"
@@ -1853,6 +2020,8 @@ preload="auto">
             </div>
 
 
+            <!-- RECEPCIÓN -->
+
             <div class="evento animar">
 
                 <div class="evento-contenido">
@@ -1861,13 +2030,16 @@ preload="auto">
                         🎉
                     </div>
 
+
                     <div class="hora">
                         3:30 PM
                     </div>
 
+
                     <h3>
                         Recepción
                     </h3>
+
 
                     <p>
 
@@ -1876,6 +2048,7 @@ preload="auto">
                         </strong>
 
                     </p>
+
 
                     <p>
 
@@ -1886,6 +2059,7 @@ preload="auto">
                         36821 Irapuato, Gto.
 
                     </p>
+
 
                     <a
                     class="mapa"
@@ -1901,6 +2075,8 @@ preload="auto">
             </div>
 
 
+            <!-- DRESS CODE -->
+
             <div class="evento animar">
 
                 <div class="evento-contenido">
@@ -1909,13 +2085,16 @@ preload="auto">
                         🤠
                     </div>
 
+
                     <div class="hora">
                         DRESS CODE
                     </div>
 
+
                     <h3>
                         Vaquero / Cowboy
                     </h3>
+
 
                     <p>
 
@@ -1924,6 +2103,7 @@ preload="auto">
                         para acompañarnos.
 
                     </p>
+
 
                     <img
                     src="imagenes/botas.png"
@@ -1943,7 +2123,7 @@ preload="auto">
 
 
 <!-- =====================================================
-     LUCAS
+     LUCAS DESTACADO
 ===================================================== -->
 
 <section class="lucas-destacado">
@@ -1954,15 +2134,19 @@ preload="auto">
             ✦
         </div>
 
+
         <h2>
             El cumpleañero 🤠
         </h2>
 
+
         <div class="divisor"></div>
+
 
         <p>
             Listo para celebrar sus 3 años.
         </p>
+
 
         <img
         src="imagenes/imagenes-lucas-renombradas/lucas-sombrero.png"
@@ -1985,11 +2169,14 @@ preload="auto">
             ✦
         </div>
 
+
         <h2>
             Momentos de Lucas
         </h2>
 
+
         <div class="divisor"></div>
+
 
         <p>
             Una pequeña colección de recuerdos
@@ -2083,6 +2270,7 @@ preload="auto">
     class="foto-full animar"
     alt="Familia de Lucas">
 
+
     <div class="foto-overlay">
 
         <h2>
@@ -2107,16 +2295,20 @@ preload="auto">
             ✦
         </div>
 
+
         <h2>
             Tu presencia es el mejor regalo
         </h2>
 
+
         <div class="divisor"></div>
+
 
         <p>
             Lo más importante para nosotros
             es compartir este día contigo.
         </p>
+
 
         <p>
             Si deseas obsequiarle algo a Lucas,
@@ -2136,29 +2328,36 @@ preload="auto">
 
     <div class="confirmacion-card animar">
 
+
         <div class="herradura">
             🐎
         </div>
+
 
         <div class="ornamento">
             ✦
         </div>
 
+
         <h2>
             ¿Nos acompañas?
         </h2>
 
+
         <div class="divisor"></div>
+
 
         <p>
             Será un honor compartir
             este día tan especial contigo.
         </p>
 
+
         <p>
             Confirma tu asistencia
             por WhatsApp.
         </p>
+
 
         <a
         class="whatsapp"
@@ -2168,6 +2367,7 @@ preload="auto">
             💬 CONFIRMAR ASISTENCIA
 
         </a>
+
 
     </div>
 
@@ -2184,9 +2384,11 @@ preload="auto">
         Con cariño,
     </p>
 
+
     <strong>
         Fátima Ordaz & Daniel Fernández
     </strong>
+
 
     <p>
         Celebrando los 3 años de Lucas Izan 🤎
