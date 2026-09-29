@@ -4,9 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Los 3 años de Lucas Izan</title>
+<title>Lucas Izan | Mis 3 años</title>
 
 <style>
+
+/* =========================================================
+   PALETA WESTERN PREMIUM
+========================================================= */
+
+:root{
+    --cafe:#3b2416;
+    --cafe-oscuro:#24140c;
+    --cafe-medio:#68401f;
+    --cuero:#8b5a2b;
+    --arena:#ead8b8;
+    --crema:#f7efdf;
+    --dorado:#c59a50;
+    --dorado-claro:#e7c77f;
+    --blanco:#fffaf0;
+    --texto:#3a281b;
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
 
 *{
     box-sizing:border-box;
@@ -18,564 +40,1375 @@ html{
 
 body{
     margin:0;
+    background:var(--crema);
+    color:var(--texto);
     font-family:Georgia,"Times New Roman",serif;
-    background:#f3e6d0;
-    color:#3b2416;
+    overflow-x:hidden;
 }
 
-/* =========================
-   GENERAL
-========================= */
+img{
+    max-width:100%;
+}
+
+button,
+a{
+    -webkit-tap-highlight-color:transparent;
+}
 
 section{
-    padding:75px 20px;
+    padding:90px 20px;
 }
 
 .contenedor{
-    max-width:900px;
+    width:100%;
+    max-width:1000px;
     margin:auto;
 }
 
 .divisor{
     width:90px;
     height:2px;
-    background:#b18a4a;
     margin:25px auto;
+    background:var(--dorado);
 }
 
-/* =========================
-   PORTADA
-========================= */
 
-.portada{
-    min-height:100vh;
+/* =========================================================
+   DECORACIONES WESTERN
+========================================================= */
+
+.ornamento{
+    color:var(--dorado-claro);
+    font-size:25px;
+    letter-spacing:8px;
+}
+
+.ornamento-linea{
     display:flex;
     align-items:center;
     justify-content:center;
-    text-align:center;
+    gap:12px;
+    margin:25px auto;
+    max-width:300px;
+}
+
+.ornamento-linea::before,
+.ornamento-linea::after{
+    content:"";
+    height:1px;
+    flex:1;
+    background:var(--dorado);
+}
+
+
+/* =========================================================
+   PORTADA
+========================================================= */
+
+.portada{
+
     position:relative;
+
+    min-height:100svh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:30px 20px;
+
     overflow:hidden;
 
-    background:
+    background:var(--cafe-oscuro);
+}
+
+
+/* FOTO */
+
+.portada-fondo{
+
+    position:absolute;
+    inset:0;
+
+    background-image:
     linear-gradient(
-        rgba(35,20,10,.38),
-        rgba(35,20,10,.65)
+        rgba(30,15,7,.12),
+        rgba(30,15,7,.72)
     ),
     url("imagenes/imagenes-lucas-renombradas/familia-caballo.png");
 
     background-size:cover;
     background-position:center;
+
+    transform:scale(1.03);
+
 }
 
-.portada-contenido{
-    width:92%;
-    max-width:650px;
-    padding:45px 30px;
 
-    background:rgba(248,237,216,.94);
+/* TEXTURA */
 
-    border:3px solid #b18a4a;
+.portada::after{
 
-    box-shadow:
-    0 15px 45px rgba(0,0,0,.4);
-}
-
-.portada small{
-    text-transform:uppercase;
-    letter-spacing:4px;
-    font-size:13px;
-}
-
-.portada h1{
-    font-size:62px;
-    margin:15px 0 5px;
-    color:#70431f;
-}
-
-.portada h2{
-    font-size:25px;
-    font-weight:normal;
-    margin:0;
-}
-
-.portada p{
-    font-size:18px;
-    line-height:1.7;
-}
-
-.boton{
-    display:inline-block;
-    margin-top:20px;
-    padding:16px 30px;
-
-    background:#633b1d;
-    color:white;
-
-    border:none;
-
-    font-family:Georgia,serif;
-    letter-spacing:2px;
-    font-size:14px;
-
-    cursor:pointer;
-
-    box-shadow:0 6px 15px rgba(0,0,0,.25);
-}
-
-.boton:hover{
-    background:#452713;
-}
-
-/* =========================
-   FOTOS GRANDES
-========================= */
-
-.foto-seccion{
-    padding:0;
-    position:relative;
-}
-
-.foto-full{
-    width:100%;
-    height:auto;
-    display:block;
-}
-
-.foto-overlay{
-    position:absolute;
-    inset:0;
-
-    display:flex;
-    align-items:flex-end;
-    justify-content:center;
-
-    padding:45px 20px;
-
-    background:
-    linear-gradient(
-        transparent 45%,
-        rgba(30,15,7,.72)
-    );
-
-    text-align:center;
-    color:white;
-}
-
-.foto-overlay h2{
-    font-size:36px;
-    margin:0;
-    text-shadow:0 3px 10px rgba(0,0,0,.7);
-}
-
-/* =========================
-   INTRO
-========================= */
-
-.intro{
-    text-align:center;
-    background:#f7efdf;
-}
-
-.intro h2{
-    font-size:38px;
-    color:#6b421f;
-}
-
-.intro p{
-    max-width:680px;
-    margin:20px auto;
-    font-size:18px;
-    line-height:1.8;
-}
-
-/* =========================
-   FOTO FAMILIA
-========================= */
-
-.foto-familia{
-    background:#3b2416;
-    text-align:center;
-    color:#f8edda;
-}
-
-.foto-familia img{
-    width:100%;
-    max-width:700px;
-    display:block;
-    margin:30px auto 0;
-
-    border:7px solid #f5ead6;
-
-    box-shadow:
-    0 10px 30px rgba(0,0,0,.35);
-}
-
-.foto-familia h2{
-    font-size:34px;
-    margin:0;
-}
-
-/* =========================
-   CUENTA REGRESIVA
-========================= */
-
-.cuenta{
-    text-align:center;
-    background:#3b2416;
-    color:#f8edda;
-}
-
-.cuenta h2{
-    font-size:32px;
-}
-
-.contador{
-    display:flex;
-    justify-content:center;
-    gap:14px;
-    flex-wrap:wrap;
-    margin-top:30px;
-}
-
-.numero{
-    width:100px;
-    padding:18px 10px;
-
-    background:#f4ead8;
-    color:#3b2416;
-}
-
-.numero strong{
-    display:block;
-    font-size:32px;
-}
-
-.numero span{
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:2px;
-}
-
-/* =========================
-   TIMELINE
-========================= */
-
-.eventos{
-    background:#ead8b8;
-}
-
-.eventos h2{
-    text-align:center;
-    font-size:40px;
-    color:#6b421f;
-    margin-bottom:55px;
-}
-
-.timeline{
-    max-width:760px;
-    margin:auto;
-    position:relative;
-}
-
-.timeline:before{
     content:"";
 
     position:absolute;
+    inset:0;
 
-    top:0;
-    bottom:0;
-    left:50%;
+    pointer-events:none;
 
-    width:3px;
+    background:
+    repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,.015) 0,
+        rgba(255,255,255,.015) 1px,
+        transparent 1px,
+        transparent 5px
+    );
 
-    background:#b18a4a;
-
-    transform:translateX(-50%);
+    opacity:.35;
 }
 
-.evento{
-    width:50%;
+
+/* MARCO */
+
+.portada-marco{
+
     position:relative;
-    padding:20px 35px;
-}
+    z-index:2;
 
-.evento:nth-child(odd){
-    left:0;
-    text-align:right;
-}
+    width:min(92%,650px);
 
-.evento:nth-child(even){
-    left:50%;
-    text-align:left;
-}
+    padding:48px 38px;
 
-.evento-contenido{
-    background:#fff9ed;
+    text-align:center;
 
-    padding:27px;
+    color:var(--blanco);
 
-    border:1px solid #c7a76c;
+    background:
+    linear-gradient(
+        145deg,
+        rgba(55,29,15,.82),
+        rgba(37,19,10,.70)
+    );
+
+    border:1px solid var(--dorado);
 
     box-shadow:
-    0 7px 20px rgba(0,0,0,.12);
+    0 20px 70px rgba(0,0,0,.55),
+    inset 0 0 0 1px rgba(255,255,255,.08);
+
+    backdrop-filter:blur(2px);
+
+    animation:entrada .9s ease both;
 }
 
-.evento-icono{
-    font-size:35px;
+
+/* ESQUINAS DECORATIVAS */
+
+.portada-marco::before,
+.portada-marco::after{
+
+    content:"✦";
+
+    position:absolute;
+
+    color:var(--dorado-claro);
+
+    font-size:22px;
 }
 
-.hora{
-    color:#875526;
-    font-size:27px;
+.portada-marco::before{
+    top:13px;
+    left:17px;
+}
+
+.portada-marco::after{
+    bottom:13px;
+    right:17px;
+}
+
+
+/* TEXTO */
+
+.portada-pretexto{
+
+    margin:0;
+
+    color:var(--dorado-claro);
+
+    font-size:10px;
+
     font-weight:bold;
+
+    letter-spacing:5px;
 }
 
-.evento h3{
-    font-size:23px;
-    margin:10px 0;
+.portada h1{
+
+    margin:14px 0 0;
+
+    color:var(--blanco);
+
+    font-size:clamp(48px,8vw,72px);
+
+    font-weight:normal;
+
+    line-height:1;
+
+    text-shadow:
+    0 5px 20px rgba(0,0,0,.6);
 }
 
-.evento p{
-    line-height:1.6;
+.portada-linea{
+
+    width:100px;
+
+    height:1px;
+
+    margin:23px auto;
+
+    background:var(--dorado-claro);
 }
 
-.mapa{
+.portada-edad{
+
+    margin:0;
+
+    color:#f0d69a;
+
+    font-size:14px;
+
+    letter-spacing:5px;
+}
+
+.portada-edad span{
+
     display:inline-block;
-    margin-top:10px;
 
-    color:#6b421f;
-    font-weight:bold;
-    text-decoration:none;
+    margin:0 8px;
+
+    font-size:42px;
+
+    color:#fff8e8;
+
+    letter-spacing:0;
 }
 
-.dress-img{
-    width:100%;
-    max-width:220px;
-    margin-top:15px;
-}
+.portada-padres{
 
-/* =========================
-   FOTO DE LUCAS
-========================= */
+    margin:25px 0 15px;
 
-.lucas-destacado{
-    background:#f7efdf;
-    text-align:center;
-}
-
-.lucas-destacado h2{
-    font-size:40px;
-    color:#6b421f;
-}
-
-.lucas-destacado p{
     font-size:18px;
+
+    letter-spacing:2px;
 }
 
-.lucas-destacado img{
-    width:100%;
-    max-width:600px;
+.portada-padres span{
 
-    display:block;
+    padding:0 10px;
 
-    margin:30px auto;
-
-    border:8px solid white;
-
-    box-shadow:
-    0 10px 30px rgba(0,0,0,.25);
+    color:var(--dorado-claro);
 }
 
-/* =========================
-   GALERÍA
-========================= */
+.portada-invitacion{
 
-.galeria{
-    background:#2f1b10;
-    padding:75px 15px;
+    max-width:450px;
+
+    margin:0 auto;
+
+    color:#f2e2c5;
+
+    font-size:16px;
+
+    line-height:1.7;
 }
 
-.galeria h2{
-    text-align:center;
-    color:#f6e8ce;
-    font-size:40px;
-    margin-top:0;
+.portada-fecha{
+
+    margin:25px 0 0;
+
+    color:var(--dorado-claro);
+
+    font-size:11px;
+
+    letter-spacing:3px;
 }
 
-.galeria p{
-    text-align:center;
-    color:#dcc6a4;
-    font-size:17px;
-    margin-bottom:40px;
-}
 
-.galeria-grid{
-    max-width:1000px;
-    margin:auto;
+/* BOTÓN */
 
-    display:grid;
+.boton{
 
-    grid-template-columns:
-    repeat(2,1fr);
+    display:inline-block;
 
-    gap:14px;
-}
+    border:0;
 
-.galeria-grid img{
-    width:100%;
-    height:430px;
+    cursor:pointer;
 
-    object-fit:cover;
+    font-family:Georgia,"Times New Roman",serif;
 
-    display:block;
+    letter-spacing:2px;
 
-    border:3px solid #b18a4a;
+    font-size:12px;
+
+    font-weight:bold;
 
     transition:
     transform .3s ease,
     box-shadow .3s ease;
 }
 
-.galeria-grid img:hover{
-    transform:scale(1.02);
+.boton-portada{
+
+    margin-top:28px;
+
+    padding:16px 30px;
+
+    background:var(--dorado-claro);
+
+    color:var(--cafe);
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,.5);
+    0 8px 20px rgba(0,0,0,.3);
 }
 
-/* FOTO HORIZONTAL */
+.boton-portada:hover{
 
-.galeria-grid .horizontal{
-    grid-column:span 2;
-    height:520px;
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 12px 25px rgba(0,0,0,.4);
 }
 
-/* =========================
-   REGALO
-========================= */
 
-.regalo{
+/* =========================================================
+   SECCIONES DE FOTO
+========================================================= */
+
+.foto-seccion{
+
+    position:relative;
+
+    padding:0;
+
+    overflow:hidden;
+
+    background:var(--cafe);
+}
+
+.foto-full{
+
+    width:100%;
+
+    display:block;
+
+    height:auto;
+}
+
+.foto-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:center;
+
+    padding:70px 25px 45px;
+
     text-align:center;
-    background:#e5cea4;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        transparent 45%,
+        rgba(25,12,5,.78)
+    );
 }
 
-.regalo h2{
-    font-size:38px;
-    color:#6b421f;
+.foto-overlay h2{
+
+    margin:0;
+
+    max-width:750px;
+
+    font-size:clamp(25px,5vw,42px);
+
+    font-weight:normal;
+
+    text-shadow:
+    0 4px 15px rgba(0,0,0,.7);
 }
 
-.regalo p{
-    font-size:19px;
-    line-height:1.8;
-    max-width:650px;
-    margin:18px auto;
-}
 
-/* =========================
-   CONFIRMACIÓN
-========================= */
+/* =========================================================
+   INTRO
+========================================================= */
 
-.confirmacion{
+.intro{
+
+    position:relative;
+
     text-align:center;
-    background:#3b2416;
-    color:#f7ead5;
+
+    background:
+    linear-gradient(
+        rgba(247,239,223,.96),
+        rgba(247,239,223,.96)
+    ),
+    url("imagenes/pielvaca.jpg");
+
+    background-size:cover;
 }
 
-.confirmacion h2{
-    font-size:40px;
+.intro::before{
+
+    content:"✦";
+
+    display:block;
+
+    margin-bottom:15px;
+
+    color:var(--dorado);
+
+    font-size:25px;
 }
 
-.confirmacion p{
+.intro h2{
+
+    margin:0;
+
+    color:var(--cafe-medio);
+
+    font-size:clamp(32px,6vw,46px);
+
+    font-weight:normal;
+}
+
+.intro p{
+
+    max-width:700px;
+
+    margin:20px auto;
+
+    font-size:18px;
+
+    line-height:1.9;
+}
+
+
+/* =========================================================
+   TEXTO ESPECIAL DE LUCAS
+========================================================= */
+
+.mensaje-lucas{
+
+    padding:100px 20px;
+
+    text-align:center;
+
+    color:var(--blanco);
+
+    background:
+    linear-gradient(
+        rgba(45,23,11,.90),
+        rgba(45,23,11,.94)
+    ),
+    url("imagenes/pielvaca.jpg");
+
+    background-size:cover;
+}
+
+.mensaje-lucas .numero{
+
+    display:block;
+
+    margin:0 auto 15px;
+
+    color:var(--dorado-claro);
+
+    font-size:16px;
+
+    letter-spacing:5px;
+}
+
+.mensaje-lucas h2{
+
+    max-width:750px;
+
+    margin:0 auto;
+
+    font-size:clamp(32px,6vw,50px);
+
+    font-weight:normal;
+
+    line-height:1.25;
+}
+
+.mensaje-lucas p{
+
+    margin-top:25px;
+
+    color:#e7d3ae;
+
+    font-size:17px;
+}
+
+
+/* =========================================================
+   CUENTA REGRESIVA
+========================================================= */
+
+.cuenta{
+
+    text-align:center;
+
+    color:var(--blanco);
+
+    background:var(--cafe);
+}
+
+.cuenta h2{
+
+    margin:0;
+
+    font-size:clamp(30px,5vw,40px);
+
+    font-weight:normal;
+}
+
+.cuenta-sub{
+
+    color:#d9c09a;
+
+    margin:15px 0 30px;
+}
+
+.contador{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+}
+
+.numero-contador{
+
+    width:100px;
+
+    padding:20px 10px;
+
+    background:#f5ead6;
+
+    color:var(--cafe);
+
+    border:1px solid var(--dorado);
+}
+
+.numero-contador strong{
+
+    display:block;
+
+    font-size:32px;
+}
+
+.numero-contador span{
+
+    font-size:10px;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+}
+
+
+/* =========================================================
+   FOTO FAMILIAR
+========================================================= */
+
+.foto-familia{
+
+    padding:90px 20px;
+
+    text-align:center;
+
+    color:var(--blanco);
+
+    background:#2c180d;
+}
+
+.foto-familia h2{
+
+    margin:0;
+
+    font-size:clamp(30px,5vw,42px);
+
+    font-weight:normal;
+}
+
+.foto-familia img{
+
+    width:100%;
+
+    max-width:760px;
+
+    display:block;
+
+    margin:35px auto 0;
+
+    border:7px solid #f6ead4;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.4);
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.eventos{
+
+    background:
+    linear-gradient(
+        rgba(234,216,184,.96),
+        rgba(234,216,184,.96)
+    ),
+    url("imagenes/pielvaca.jpg");
+
+    background-size:cover;
+}
+
+.eventos h2{
+
+    margin:0 0 60px;
+
+    text-align:center;
+
+    color:var(--cafe-medio);
+
+    font-size:clamp(34px,6vw,48px);
+
+    font-weight:normal;
+}
+
+.timeline{
+
+    max-width:850px;
+
+    margin:auto;
+
+    position:relative;
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    bottom:0;
+
+    width:2px;
+
+    background:var(--dorado);
+
+    transform:translateX(-50%);
+}
+
+.evento{
+
+    width:50%;
+
+    position:relative;
+
+    padding:18px 40px;
+}
+
+.evento:nth-child(odd){
+
+    left:0;
+
+    text-align:right;
+}
+
+.evento:nth-child(even){
+
+    left:50%;
+
+    text-align:left;
+}
+
+.evento-contenido{
+
+    position:relative;
+
+    padding:30px;
+
+    background:rgba(255,250,240,.94);
+
+    border:1px solid #c9a66a;
+
+    box-shadow:
+    0 10px 25px rgba(61,36,18,.12);
+}
+
+.evento-contenido::before{
+
+    content:"✦";
+
+    position:absolute;
+
+    top:15px;
+
+    color:var(--dorado);
+
+    font-size:12px;
+}
+
+.evento:nth-child(odd)
+.evento-contenido::before{
+
+    left:15px;
+}
+
+.evento:nth-child(even)
+.evento-contenido::before{
+
+    right:15px;
+}
+
+.evento-icono{
+
+    font-size:32px;
+}
+
+.hora{
+
+    margin-top:7px;
+
+    color:#805027;
+
+    font-size:26px;
+
+    font-weight:bold;
+}
+
+.evento h3{
+
+    margin:10px 0;
+
+    color:var(--cafe-medio);
+
+    font-size:22px;
+}
+
+.evento p{
+
+    line-height:1.7;
+}
+
+.mapa{
+
+    display:inline-block;
+
+    margin-top:8px;
+
+    color:#70431f;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+.dress-img{
+
+    width:100%;
+
+    max-width:220px;
+
+    margin-top:15px;
+}
+
+
+/* =========================================================
+   LUCAS DESTACADO
+========================================================= */
+
+.lucas-destacado{
+
+    padding:90px 20px;
+
+    text-align:center;
+
+    background:var(--crema);
+}
+
+.lucas-destacado h2{
+
+    margin:0;
+
+    color:var(--cafe-medio);
+
+    font-size:clamp(32px,6vw,46px);
+
+    font-weight:normal;
+}
+
+.lucas-destacado p{
+
+    color:#755638;
+
     font-size:18px;
 }
 
+.lucas-destacado img{
+
+    width:100%;
+
+    max-width:620px;
+
+    display:block;
+
+    margin:35px auto 0;
+
+    border:8px solid white;
+
+    box-shadow:
+    0 15px 35px rgba(54,31,16,.22);
+}
+
+
+/* =========================================================
+   GALERÍA ÁLBUM
+========================================================= */
+
+.galeria{
+
+    padding:100px 20px;
+
+    color:var(--blanco);
+
+    background:
+    linear-gradient(
+        rgba(39,21,12,.95),
+        rgba(39,21,12,.95)
+    ),
+    url("imagenes/pielvaca.jpg");
+
+    background-size:cover;
+}
+
+.galeria-titulo{
+
+    text-align:center;
+
+    margin-bottom:50px;
+}
+
+.galeria-titulo h2{
+
+    margin:0;
+
+    font-size:clamp(34px,6vw,48px);
+
+    font-weight:normal;
+}
+
+.galeria-titulo p{
+
+    color:#d9c09a;
+
+    font-size:17px;
+
+    line-height:1.7;
+}
+
+
+/* ALBUM */
+
+.album{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    columns:2 300px;
+
+    column-gap:22px;
+}
+
+.album-item{
+
+    position:relative;
+
+    display:inline-block;
+
+    width:100%;
+
+    margin:0 0 22px;
+
+    break-inside:avoid;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    padding:9px;
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.35);
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.album-item:hover{
+
+    transform:translateY(-5px) rotate(-.3deg);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.45);
+}
+
+.album-item:nth-child(2n){
+
+    transform:rotate(.5deg);
+}
+
+.album-item:nth-child(3n){
+
+    transform:rotate(-.4deg);
+}
+
+.album-item img{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+}
+
+
+/* TEXTO SOBRE FOTO */
+
+.album-caption{
+
+    position:absolute;
+
+    left:9px;
+
+    right:9px;
+
+    bottom:9px;
+
+    padding:30px 15px 14px;
+
+    color:white;
+
+    font-size:14px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        transparent,
+        rgba(35,18,9,.75)
+    );
+}
+
+
+/* =========================================================
+   REGALO
+========================================================= */
+
+.regalo{
+
+    text-align:center;
+
+    background:#e7d1a9;
+
+    position:relative;
+}
+
+.regalo h2{
+
+    margin:0;
+
+    color:var(--cafe-medio);
+
+    font-size:clamp(31px,5vw,43px);
+
+    font-weight:normal;
+}
+
+.regalo p{
+
+    max-width:650px;
+
+    margin:18px auto;
+
+    font-size:18px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   CONFIRMACIÓN - TARJETA
+========================================================= */
+
+.confirmacion{
+
+    position:relative;
+
+    padding:100px 20px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(38,20,11,.94),
+        rgba(38,20,11,.94)
+    ),
+    url("imagenes/pielvaca.jpg");
+
+    background-size:cover;
+}
+
+.confirmacion-card{
+
+    max-width:620px;
+
+    margin:auto;
+
+    padding:50px 30px;
+
+    color:var(--blanco);
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(72,40,20,.94),
+        rgba(45,23,12,.96)
+    );
+
+    border:1px solid var(--dorado);
+
+    outline:1px solid rgba(197,154,80,.4);
+
+    outline-offset:9px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.45);
+}
+
+.confirmacion-card .herradura{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+    color:var(--dorado-claro);
+}
+
+.confirmacion-card h2{
+
+    margin:0;
+
+    font-size:clamp(34px,6vw,46px);
+
+    font-weight:normal;
+}
+
+.confirmacion-card p{
+
+    color:#e8d4b1;
+
+    font-size:17px;
+
+    line-height:1.7;
+}
+
 .whatsapp{
+
     display:inline-block;
 
     margin-top:20px;
 
-    padding:16px 30px;
+    padding:17px 30px;
 
-    background:#f4ead8;
+    background:#e7c77f;
+
     color:#3b2416;
 
     text-decoration:none;
 
     font-weight:bold;
 
-    box-shadow:
-    0 5px 15px rgba(0,0,0,.25);
+    letter-spacing:1px;
+
+    transition:
+    transform .3s ease,
+    background .3s ease;
 }
 
-/* =========================
+.whatsapp:hover{
+
+    transform:translateY(-3px);
+
+    background:#f0d99c;
+}
+
+
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer{
+
+    padding:45px 20px;
+
     text-align:center;
 
-    padding:40px 20px;
-
-    background:#24150d;
-
     color:#d9c3a0;
+
+    background:var(--cafe-oscuro);
 }
 
 footer strong{
+
     color:#fff0d0;
 }
 
-/* =========================
+
+/* =========================================================
    BOTÓN MÚSICA
-========================= */
+========================================================= */
 
 .boton-musica{
+
     position:fixed;
 
-    right:20px;
-    bottom:20px;
+    right:18px;
 
-    width:56px;
-    height:56px;
+    bottom:18px;
+
+    width:57px;
+
+    height:57px;
 
     border-radius:50%;
 
-    border:2px solid #e1c17a;
+    border:2px solid var(--dorado-claro);
 
     background:#5a351c;
 
     color:white;
 
-    font-size:22px;
+    font-size:21px;
 
     cursor:pointer;
 
     z-index:9999;
 
     box-shadow:
-    0 5px 18px rgba(0,0,0,.4);
+    0 7px 20px rgba(0,0,0,.4);
+
+    transition:
+    transform .25s ease;
 }
 
-/* =========================
+.boton-musica:hover{
+
+    transform:scale(1.08);
+}
+
+
+/* =========================================================
+   ANIMACIONES AL HACER SCROLL
+========================================================= */
+
+.animar{
+
+    opacity:0;
+
+    transform:translateY(35px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.animar.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+
+/* =========================================================
+   ENTRADA PORTADA
+========================================================= */
+
+@keyframes entrada{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(25px)
+        scale(.98);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+}
+
+
+/* =========================================================
    CELULAR
-========================= */
+========================================================= */
 
 @media(max-width:700px){
 
+    section{
+
+        padding:70px 18px;
+
+    }
+
+
+    /* PORTADA */
+
+    .portada{
+
+        min-height:100svh;
+
+        padding:25px 15px;
+
+    }
+
+    .portada-fondo{
+
+        background-position:
+        55% center;
+
+    }
+
+    .portada-marco{
+
+        width:88%;
+
+        padding:38px 20px;
+
+    }
+
+    .portada-pretexto{
+
+        font-size:8px;
+
+        letter-spacing:3px;
+
+    }
+
     .portada h1{
-        font-size:45px;
+
+        font-size:46px;
+
     }
 
-    .portada h2{
-        font-size:20px;
+    .portada-edad{
+
+        font-size:12px;
+
+        letter-spacing:3px;
+
     }
 
-    .portada-contenido{
-        padding:35px 20px;
+    .portada-edad span{
+
+        font-size:36px;
+
     }
 
-    .timeline:before{
-        left:20px;
+    .portada-padres{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+    }
+
+    .portada-invitacion{
+
+        font-size:14px;
+
+    }
+
+    .portada-fecha{
+
+        font-size:9px;
+
+        letter-spacing:2px;
+
+    }
+
+    .boton-portada{
+
+        width:100%;
+
+        max-width:250px;
+
+    }
+
+
+    /* FOTOS */
+
+    .foto-overlay{
+
+        padding:
+        60px 18px
+        30px;
+
+    }
+
+    .foto-overlay h2{
+
+        font-size:26px;
+
+    }
+
+
+    /* TIMELINE */
+
+    .timeline::before{
+
+        left:18px;
+
     }
 
     .evento,
@@ -586,61 +1419,91 @@ footer strong{
 
         left:0;
 
+        padding:
+        12px 0 12px 48px;
+
         text-align:left;
 
-        padding-left:55px;
-        padding-right:0;
     }
 
-    .contador{
-        gap:8px;
+    .evento-contenido{
+
+        padding:25px 20px;
+
     }
 
-    .numero{
-        width:75px;
+
+    /* CONTADOR */
+
+    .numero-contador{
+
+        width:72px;
+
+        padding:15px 6px;
+
     }
 
-    .numero strong{
+    .numero-contador strong{
+
         font-size:25px;
+
     }
 
-    .foto-overlay h2{
-        font-size:27px;
+    .numero-contador span{
+
+        font-size:8px;
+
+        letter-spacing:1px;
+
     }
 
-    .galeria-grid{
-        grid-template-columns:1fr;
+
+    /* ÁLBUM */
+
+    .album{
+
+        columns:1;
+
     }
 
-    .galeria-grid img,
-    .galeria-grid .horizontal{
-        grid-column:auto;
-        height:auto;
-        aspect-ratio:3/4;
+    .album-item,
+    .album-item:nth-child(2n),
+    .album-item:nth-child(3n){
+
+        transform:none;
+
     }
 
-}
 
-/* =========================
-   ANIMACIÓN SUAVE
-========================= */
+    /* CONFIRMACIÓN */
 
-@keyframes aparecer{
+    .confirmacion-card{
 
-    from{
-        opacity:0;
-        transform:translateY(20px);
+        padding:42px 20px;
+
     }
 
-    to{
-        opacity:1;
-        transform:translateY(0);
+    .whatsapp{
+
+        width:100%;
+
     }
 
-}
 
-.portada-contenido{
-    animation:aparecer 1.2s ease;
+    /* MÚSICA */
+
+    .boton-musica{
+
+        right:14px;
+
+        bottom:14px;
+
+        width:52px;
+
+        height:52px;
+
+    }
+
 }
 
 </style>
@@ -650,48 +1513,96 @@ footer strong{
 <body>
 
 
-<!-- =========================
+<!-- =========================================================
      MÚSICA
-========================= -->
+========================================================= -->
 
-<audio id="musica" loop preload="auto">
-    <source src="./musica.mp3" type="audio/mpeg">
+<audio
+id="musica"
+loop
+preload="auto">
+
+    <source
+    src="./musica.mp3"
+    type="audio/mpeg">
+
 </audio>
 
 
-<!-- =========================
+<!-- =========================================================
      PORTADA
-========================= -->
+========================================================= -->
 
 <section class="portada">
 
-    <div class="portada-contenido">
+    <div class="portada-fondo"></div>
 
-        <small>Con mucho cariño</small>
 
-        <h1>Lucas Izan</h1>
+    <div class="portada-marco">
 
-        <h2>¡Mis 3 años!</h2>
+        <div class="ornamento">
+            ✦
+        </div>
 
-        <div class="divisor"></div>
 
-        <p>
+        <p class="portada-pretexto">
+            UNA CELEBRACIÓN MUY ESPECIAL
+        </p>
 
-            Fátima Ordaz<br>
-            &<br>
+
+        <h1>
+            Lucas Izan
+        </h1>
+
+
+        <div class="portada-linea"></div>
+
+
+        <p class="portada-edad">
+
+            MIS
+
+            <span>
+                3
+            </span>
+
+            AÑOS
+
+        </p>
+
+
+        <p class="portada-padres">
+
+            Fátima Ordaz
+
+            <span>
+                &
+            </span>
+
             Daniel Fernández
 
         </p>
 
-        <p>
 
-            Tenemos el honor de invitarte
-            a celebrar este día tan especial.
+        <p class="portada-invitacion">
+
+            Tenemos el honor de invitarte<br>
+
+            a celebrar junto a nosotros
+            este día tan especial.
 
         </p>
 
+
+        <p class="portada-fecha">
+
+            SÁBADO · 14 · NOVIEMBRE · 2026
+
+        </p>
+
+
         <button
-        class="boton"
+        class="boton boton-portada"
         onclick="abrirInvitacion()">
 
             ABRIR INVITACIÓN
@@ -703,52 +1614,57 @@ footer strong{
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      FOTO FAMILIAR
-========================= -->
+========================================================= -->
 
 <section class="foto-seccion">
 
     <img
     src="imagenes/imagenes-lucas-renombradas/familia-caballo.png"
-    class="foto-full"
-    alt="Lucas y su familia">
+    class="foto-full animar"
+    alt="Lucas y su familia a caballo">
+
 
     <div class="foto-overlay">
 
-        <div>
-
-            <h2>
-                Una aventura está por comenzar...
-            </h2>
-
-        </div>
+        <h2>
+            Una aventura está por comenzar...
+        </h2>
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     INTRO
-========================= -->
+<!-- =========================================================
+     INTRODUCCIÓN
+========================================================= -->
 
-<section
-class="intro"
-id="inicio">
+<section class="intro">
 
-    <div class="contenedor">
+    <div class="contenedor animar">
 
-        <h2>¡Vamos a celebrar!</h2>
+        <div class="ornamento">
+            ✦
+        </div>
+
+
+        <h2>
+            ¡Vamos a celebrar!
+        </h2>
+
 
         <div class="divisor"></div>
+
 
         <p>
 
             Hay momentos que merecen ser celebrados
-            y queremos compartir contigo uno muy especial:
+            y queremos compartir contigo uno muy especial.
 
         </p>
+
 
         <p>
 
@@ -757,6 +1673,7 @@ id="inicio">
             </strong>
 
         </p>
+
 
         <p>
 
@@ -770,16 +1687,17 @@ id="inicio">
 </section>
 
 
-<!-- =========================
-     MAMÁ + LUCAS
-========================= -->
+<!-- =========================================================
+     FOTO MAMÁ + LUCAS
+========================================================= -->
 
 <section class="foto-seccion">
 
     <img
     src="imagenes/imagenes-lucas-renombradas/mama-lucas.png"
-    class="foto-full"
+    class="foto-full animar"
     alt="Mamá y Lucas">
+
 
     <div class="foto-overlay">
 
@@ -792,21 +1710,61 @@ id="inicio">
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
+     MENSAJE ESPECIAL
+========================================================= -->
+
+<section class="mensaje-lucas">
+
+    <div class="contenedor animar">
+
+        <span class="numero">
+            TRES AÑOS DE AVENTURAS
+        </span>
+
+
+        <div class="ornamento">
+            ✦ ✦ ✦
+        </div>
+
+
+        <h2>
+            Nuestro pequeño vaquero cumple 3 años
+        </h2>
+
+
+        <p>
+            Y queremos celebrarlo rodeados
+            de las personas que más queremos.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
      CUENTA REGRESIVA
-========================= -->
+========================================================= -->
 
 <section class="cuenta">
 
-    <div class="contenedor">
+    <div class="contenedor animar">
 
         <h2>
             Falta muy poco...
         </h2>
 
+
+        <p class="cuenta-sub">
+            Nos vemos el 14 de noviembre de 2026
+        </p>
+
+
         <div class="contador">
 
-            <div class="numero">
+
+            <div class="numero-contador">
 
                 <strong id="dias">
                     0
@@ -819,7 +1777,7 @@ id="inicio">
             </div>
 
 
-            <div class="numero">
+            <div class="numero-contador">
 
                 <strong id="horas">
                     0
@@ -832,7 +1790,7 @@ id="inicio">
             </div>
 
 
-            <div class="numero">
+            <div class="numero-contador">
 
                 <strong id="minutos">
                     0
@@ -845,7 +1803,7 @@ id="inicio">
             </div>
 
 
-            <div class="numero">
+            <div class="numero-contador">
 
                 <strong id="segundos">
                     0
@@ -857,6 +1815,7 @@ id="inicio">
 
             </div>
 
+
         </div>
 
     </div>
@@ -864,19 +1823,26 @@ id="inicio">
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      FOTO FAMILIAR
-========================= -->
+========================================================= -->
 
 <section class="foto-familia">
 
-    <div class="contenedor">
+    <div class="contenedor animar">
+
+        <div class="ornamento">
+            ✦
+        </div>
+
 
         <h2>
             Los que hacen este día especial
         </h2>
 
+
         <div class="divisor"></div>
+
 
         <img
         src="imagenes/imagenes-lucas-renombradas/familia-lucas.png"
@@ -887,24 +1853,29 @@ id="inicio">
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      EVENTOS
-========================= -->
+========================================================= -->
 
 <section class="eventos">
 
     <div class="contenedor">
 
-        <h2>
-            El gran día
-        </h2>
+        <div class="animar">
+
+            <h2>
+                El gran día
+            </h2>
+
+        </div>
+
 
         <div class="timeline">
 
 
             <!-- CEREMONIA -->
 
-            <div class="evento">
+            <div class="evento animar">
 
                 <div class="evento-contenido">
 
@@ -912,13 +1883,16 @@ id="inicio">
                         ⛪
                     </div>
 
+
                     <div class="hora">
                         2:00 PM
                     </div>
 
+
                     <h3>
                         Ceremonia religiosa
                     </h3>
+
 
                     <p>
 
@@ -928,13 +1902,17 @@ id="inicio">
 
                     </p>
 
+
                     <p>
 
                         Señor de Esquipulas 97<br>
+
                         Arandas, 36626<br>
+
                         Irapuato, Gto.
 
                     </p>
+
 
                     <a
                     class="mapa"
@@ -952,7 +1930,7 @@ id="inicio">
 
             <!-- RECEPCIÓN -->
 
-            <div class="evento">
+            <div class="evento animar">
 
                 <div class="evento-contenido">
 
@@ -960,13 +1938,16 @@ id="inicio">
                         🎉
                     </div>
 
+
                     <div class="hora">
                         3:30 PM
                     </div>
 
+
                     <h3>
                         Recepción
                     </h3>
+
 
                     <p>
 
@@ -976,13 +1957,17 @@ id="inicio">
 
                     </p>
 
+
                     <p>
 
                         Blvrd Arandas 3675<br>
+
                         Villas de Irapuato<br>
+
                         36821 Irapuato, Gto.
 
                     </p>
+
 
                     <a
                     class="mapa"
@@ -1000,7 +1985,7 @@ id="inicio">
 
             <!-- DRESS CODE -->
 
-            <div class="evento">
+            <div class="evento animar">
 
                 <div class="evento-contenido">
 
@@ -1008,13 +1993,16 @@ id="inicio">
                         🤠
                     </div>
 
+
                     <div class="hora">
                         DRESS CODE
                     </div>
 
+
                     <h3>
                         Vaquero / Cowboy
                     </h3>
+
 
                     <p>
 
@@ -1023,6 +2011,7 @@ id="inicio">
                         para acompañarnos.
 
                     </p>
+
 
                     <img
                     src="imagenes/botas.png"
@@ -1041,23 +2030,31 @@ id="inicio">
 </section>
 
 
-<!-- =========================
-     LUCAS CON SOMBRERO
-========================= -->
+<!-- =========================================================
+     LUCAS DESTACADO
+========================================================= -->
 
 <section class="lucas-destacado">
 
-    <div class="contenedor">
+    <div class="contenedor animar">
+
+        <div class="ornamento">
+            ✦
+        </div>
+
 
         <h2>
             El cumpleañero 🤠
         </h2>
 
+
         <div class="divisor"></div>
+
 
         <p>
             Listo para celebrar sus 3 años.
         </p>
+
 
         <img
         src="imagenes/imagenes-lucas-renombradas/lucas-sombrero.png"
@@ -1068,74 +2065,125 @@ id="inicio">
 </section>
 
 
-<!-- =========================
-     GALERÍA
-========================= -->
+<!-- =========================================================
+     GALERÍA ÁLBUM
+========================================================= -->
 
 <section class="galeria">
 
-    <div class="contenedor">
+    <div class="galeria-titulo animar">
+
+        <div class="ornamento">
+            ✦
+        </div>
+
 
         <h2>
-            Lucas, nuestro pequeño vaquero
+            Momentos de Lucas
         </h2>
 
+
+        <div class="divisor"></div>
+
+
         <p>
-            Una pequeña colección de momentos
-            de nuestro cumpleañero.
+            Una pequeña colección de recuerdos
+            de nuestro pequeño vaquero.
         </p>
 
     </div>
 
 
-    <div class="galeria-grid">
+    <div class="album">
 
 
-        <img
-        src="imagenes/imagenes-lucas-renombradas/lucas-chamarra.png"
-        alt="Lucas vaquero">
+        <div class="album-item animar">
+
+            <img
+            src="imagenes/imagenes-lucas-renombradas/lucas-chamarra.png"
+            alt="Lucas">
+
+            <div class="album-caption">
+                Nuestro pequeño vaquero
+            </div>
+
+        </div>
 
 
-        <img
-        src="imagenes/imagenes-lucas-renombradas/lucas-sonrisa.png"
-        alt="Lucas sonriendo">
+        <div class="album-item animar">
+
+            <img
+            src="imagenes/imagenes-lucas-renombradas/lucas-sonrisa.png"
+            alt="Lucas sonriendo">
+
+            <div class="album-caption">
+                Tres años de sonrisas
+            </div>
+
+        </div>
 
 
-        <img
-        src="imagenes/imagenes-lucas-renombradas/lucas-vaquero.png"
-        alt="Lucas vestido de vaquero">
+        <div class="album-item animar">
+
+            <img
+            src="imagenes/imagenes-lucas-renombradas/lucas-vaquero.png"
+            alt="Lucas vestido de vaquero">
+
+            <div class="album-caption">
+                Listo para la aventura
+            </div>
+
+        </div>
 
 
-        <img
-        src="imagenes/imagenes-lucas-renombradas/lucas-traje-negro.png"
-        alt="Lucas con traje negro">
+        <div class="album-item animar">
+
+            <img
+            src="imagenes/imagenes-lucas-renombradas/lucas-traje-negro.png"
+            alt="Lucas con traje negro">
+
+            <div class="album-caption">
+                Nuestro cumpleañero
+            </div>
+
+        </div>
 
 
-        <img
-        class="horizontal"
-        src="imagenes/imagenes-lucas-renombradas/foto-extra.png"
-        alt="Lucas">
+        <div class="album-item animar">
+
+            <img
+            src="imagenes/imagenes-lucas-renombradas/foto-extra.png"
+            alt="Lucas">
+
+            <div class="album-caption">
+                Un día para recordar
+            </div>
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     FOTO ESPECIAL
-========================= -->
+<!-- =========================================================
+     FOTO FINAL
+========================================================= -->
 
 <section class="foto-seccion">
 
     <img
     src="imagenes/imagenes-lucas-renombradas/familia-lucas.png"
-    class="foto-full"
-    alt="Familia">
+    class="foto-full animar"
+    alt="Familia de Lucas">
+
 
     <div class="foto-overlay">
 
         <h2>
-            Gracias por ser parte de nuestra historia 🤎
+            Gracias por ser parte
+            de nuestra historia 🤎
         </h2>
 
     </div>
@@ -1143,32 +2191,36 @@ id="inicio">
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      REGALO
-========================= -->
+========================================================= -->
 
 <section class="regalo">
 
-    <div class="contenedor">
+    <div class="contenedor animar">
+
+        <div class="ornamento">
+            ✦
+        </div>
+
 
         <h2>
             Tu presencia es el mejor regalo
         </h2>
 
+
         <div class="divisor"></div>
 
-        <p>
 
+        <p>
             Lo más importante para nosotros
             es compartir este día contigo.
-
         </p>
 
-        <p>
 
+        <p>
             Si deseas obsequiarle algo a Lucas,
             tendremos un espacio para sobres.
-
         </p>
 
     </div>
@@ -1176,21 +2228,44 @@ id="inicio">
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      CONFIRMACIÓN
-========================= -->
+========================================================= -->
 
 <section class="confirmacion">
 
-    <div class="contenedor">
+    <div class="confirmacion-card animar">
+
+
+        <div class="herradura">
+            ♧
+        </div>
+
+
+        <div class="ornamento">
+            ✦
+        </div>
+
 
         <h2>
             ¿Nos acompañas?
         </h2>
 
+
+        <div class="divisor"></div>
+
+
         <p>
-            Confirma tu asistencia por WhatsApp.
+            Será un honor compartir
+            este día tan especial contigo.
         </p>
+
+
+        <p>
+            Confirma tu asistencia
+            por WhatsApp.
+        </p>
+
 
         <a
         class="whatsapp"
@@ -1201,14 +2276,15 @@ id="inicio">
 
         </a>
 
+
     </div>
 
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      FOOTER
-========================= -->
+========================================================= -->
 
 <footer>
 
@@ -1216,9 +2292,11 @@ id="inicio">
         Con cariño,
     </p>
 
+
     <strong>
         Fátima Ordaz & Daniel Fernández
     </strong>
+
 
     <p>
         Celebrando los 3 años de Lucas Izan 🤎
@@ -1227,9 +2305,9 @@ id="inicio">
 </footer>
 
 
-<!-- =========================
+<!-- =========================================================
      BOTÓN MÚSICA
-========================= -->
+========================================================= -->
 
 <button
 class="boton-musica"
@@ -1243,9 +2321,9 @@ onclick="reproducirMusica()">
 
 <script>
 
-/* =========================
+/* =========================================================
    MÚSICA
-========================= */
+========================================================= */
 
 var musica =
 document.getElementById("musica");
@@ -1254,32 +2332,18 @@ var botonMusica =
 document.getElementById("botonMusica");
 
 
-function actualizarBoton(){
-
-    if(musica.paused){
-
-        botonMusica.innerHTML="♪";
-
-    }else{
-
-        botonMusica.innerHTML="❚❚";
-
-    }
-
-}
-
-
-/* ABRIR INVITACIÓN */
-
 function abrirInvitacion(){
 
     musica.src="./musica.mp3";
 
     musica.load();
 
-    var promesa=musica.play();
 
-    if(promesa!==undefined){
+    var promesa =
+    musica.play();
+
+
+    if(promesa !== undefined){
 
         promesa.then(function(){
 
@@ -1296,16 +2360,15 @@ function abrirInvitacion(){
 
     }
 
+
     document
     .getElementById("inicio")
-    .scrollIntoView({
+    ?.scrollIntoView({
         behavior:"smooth"
     });
 
 }
 
-
-/* BOTÓN DE MÚSICA */
 
 function reproducirMusica(){
 
@@ -1334,7 +2397,9 @@ function reproducirMusica(){
 
         });
 
-    }else{
+    }
+
+    else{
 
         musica.pause();
 
@@ -1365,9 +2430,9 @@ musica.addEventListener(
 );
 
 
-/* =========================
+/* =========================================================
    CUENTA REGRESIVA
-========================= */
+========================================================= */
 
 var fechaEvento =
 new Date(
@@ -1380,23 +2445,20 @@ function actualizarCuenta(){
     var ahora =
     new Date().getTime();
 
+
     var diferencia =
     fechaEvento-ahora;
 
 
     if(diferencia<=0){
 
-        document.getElementById("dias")
-        .innerHTML="0";
+        document.getElementById("dias").innerHTML="0";
 
-        document.getElementById("horas")
-        .innerHTML="0";
+        document.getElementById("horas").innerHTML="0";
 
-        document.getElementById("minutos")
-        .innerHTML="0";
+        document.getElementById("minutos").innerHTML="0";
 
-        document.getElementById("segundos")
-        .innerHTML="0";
+        document.getElementById("segundos").innerHTML="0";
 
         return;
 
@@ -1455,6 +2517,51 @@ setInterval(
     actualizarCuenta,
     1000
 );
+
+
+/* =========================================================
+   ANIMACIONES AL HACER SCROLL
+========================================================= */
+
+var elementos =
+document.querySelectorAll(".animar");
+
+
+var observador =
+new IntersectionObserver(
+
+    function(entradas){
+
+        entradas.forEach(function(entrada){
+
+            if(entrada.isIntersecting){
+
+                entrada.target.classList.add(
+                    "visible"
+                );
+
+                observador.unobserve(
+                    entrada.target
+                );
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold:0.12
+    }
+
+);
+
+
+elementos.forEach(function(elemento){
+
+    observador.observe(elemento);
+
+});
 
 </script>
 
