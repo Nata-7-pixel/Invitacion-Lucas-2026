@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>3 años de Lucas Izan</title>
+<title>Los 3 años de Lucas Izan</title>
 
 <style>
 
@@ -18,13 +18,17 @@ html{
 
 body{
     margin:0;
-    font-family:Georgia, "Times New Roman", serif;
-    background:#f4ead8;
+    font-family:Georgia,"Times New Roman",serif;
+    background:#f3e6d0;
     color:#3b2416;
 }
 
+/* =========================
+   GENERAL
+========================= */
+
 section{
-    padding:70px 20px;
+    padding:75px 20px;
 }
 
 .contenedor{
@@ -32,7 +36,16 @@ section{
     margin:auto;
 }
 
-/* PORTADA */
+.divisor{
+    width:90px;
+    height:2px;
+    background:#b18a4a;
+    margin:25px auto;
+}
+
+/* =========================
+   PORTADA
+========================= */
 
 .portada{
     min-height:100vh;
@@ -44,73 +57,119 @@ section{
     overflow:hidden;
 
     background:
-    linear-gradient(rgba(45,25,12,.35),rgba(45,25,12,.55)),
-    url("imagenes/pielvaca.jpg");
+    linear-gradient(
+        rgba(35,20,10,.38),
+        rgba(35,20,10,.65)
+    ),
+    url("imagenes/imagenes-lucas-renombradas/familia-caballo.png");
 
     background-size:cover;
     background-position:center;
 }
 
 .portada-contenido{
-    background:rgba(245,232,207,.93);
-    padding:45px 30px;
-    border:3px solid #b18a4a;
-    box-shadow:0 10px 35px rgba(0,0,0,.35);
+    width:92%;
     max-width:650px;
-    width:90%;
+    padding:45px 30px;
+
+    background:rgba(248,237,216,.94);
+
+    border:3px solid #b18a4a;
+
+    box-shadow:
+    0 15px 45px rgba(0,0,0,.4);
 }
 
 .portada small{
-    letter-spacing:4px;
     text-transform:uppercase;
-    font-size:14px;
+    letter-spacing:4px;
+    font-size:13px;
 }
 
 .portada h1{
-    font-family:Georgia,serif;
-    font-size:60px;
+    font-size:62px;
     margin:15px 0 5px;
-    color:#6b421f;
+    color:#70431f;
 }
 
 .portada h2{
-    margin:0 0 25px;
-    font-size:24px;
+    font-size:25px;
     font-weight:normal;
+    margin:0;
 }
 
 .portada p{
     font-size:18px;
-    line-height:1.6;
-}
-
-.divisor{
-    width:100px;
-    height:2px;
-    background:#b18a4a;
-    margin:25px auto;
+    line-height:1.7;
 }
 
 .boton{
     display:inline-block;
     margin-top:20px;
-    padding:15px 30px;
-    background:#6b421f;
-    color:#fff;
-    text-decoration:none;
+    padding:16px 30px;
+
+    background:#633b1d;
+    color:white;
+
     border:none;
-    cursor:pointer;
+
     font-family:Georgia,serif;
     letter-spacing:2px;
-    font-size:15px;
-    box-shadow:0 5px 12px rgba(0,0,0,.2);
+    font-size:14px;
+
+    cursor:pointer;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.25);
 }
 
 .boton:hover{
-    background:#4b2c18;
+    background:#452713;
 }
 
-/* INTRO */
+/* =========================
+   FOTOS GRANDES
+========================= */
+
+.foto-seccion{
+    padding:0;
+    position:relative;
+}
+
+.foto-full{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.foto-overlay{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+
+    padding:45px 20px;
+
+    background:
+    linear-gradient(
+        transparent 45%,
+        rgba(30,15,7,.72)
+    );
+
+    text-align:center;
+    color:white;
+}
+
+.foto-overlay h2{
+    font-size:36px;
+    margin:0;
+    text-shadow:0 3px 10px rgba(0,0,0,.7);
+}
+
+/* =========================
+   INTRO
+========================= */
 
 .intro{
     text-align:center;
@@ -118,18 +177,47 @@ section{
 }
 
 .intro h2{
-    font-size:36px;
+    font-size:38px;
     color:#6b421f;
 }
 
 .intro p{
-    max-width:650px;
+    max-width:680px;
     margin:20px auto;
-    line-height:1.8;
     font-size:18px;
+    line-height:1.8;
 }
 
-/* CUENTA REGRESIVA */
+/* =========================
+   FOTO FAMILIA
+========================= */
+
+.foto-familia{
+    background:#3b2416;
+    text-align:center;
+    color:#f8edda;
+}
+
+.foto-familia img{
+    width:100%;
+    max-width:700px;
+    display:block;
+    margin:30px auto 0;
+
+    border:7px solid #f5ead6;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.35);
+}
+
+.foto-familia h2{
+    font-size:34px;
+    margin:0;
+}
+
+/* =========================
+   CUENTA REGRESIVA
+========================= */
 
 .cuenta{
     text-align:center;
@@ -138,22 +226,23 @@ section{
 }
 
 .cuenta h2{
-    font-size:30px;
-    margin-bottom:30px;
+    font-size:32px;
 }
 
 .contador{
     display:flex;
     justify-content:center;
-    gap:15px;
+    gap:14px;
     flex-wrap:wrap;
+    margin-top:30px;
 }
 
 .numero{
-    background:#f4ead8;
-    color:#3b2416;
     width:100px;
     padding:18px 10px;
+
+    background:#f4ead8;
+    color:#3b2416;
 }
 
 .numero strong{
@@ -162,44 +251,51 @@ section{
 }
 
 .numero span{
-    font-size:12px;
+    font-size:11px;
     text-transform:uppercase;
     letter-spacing:2px;
 }
 
-/* TIMELINE */
+/* =========================
+   TIMELINE
+========================= */
 
 .eventos{
-    background:#efe0c5;
+    background:#ead8b8;
 }
 
 .eventos h2{
     text-align:center;
-    font-size:38px;
+    font-size:40px;
     color:#6b421f;
-    margin-bottom:50px;
+    margin-bottom:55px;
 }
 
 .timeline{
-    position:relative;
-    max-width:700px;
+    max-width:760px;
     margin:auto;
+    position:relative;
 }
 
 .timeline:before{
     content:"";
+
     position:absolute;
-    left:50%;
+
     top:0;
     bottom:0;
+    left:50%;
+
     width:3px;
+
     background:#b18a4a;
+
     transform:translateX(-50%);
 }
 
 .evento{
-    position:relative;
     width:50%;
+    position:relative;
     padding:20px 35px;
 }
 
@@ -214,20 +310,23 @@ section{
 }
 
 .evento-contenido{
-    background:#fff8eb;
-    padding:25px;
-    border:1px solid #c5a46a;
-    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    background:#fff9ed;
+
+    padding:27px;
+
+    border:1px solid #c7a76c;
+
+    box-shadow:
+    0 7px 20px rgba(0,0,0,.12);
 }
 
 .evento-icono{
     font-size:35px;
-    margin-bottom:10px;
 }
 
 .hora{
-    font-size:26px;
-    color:#8a5b2d;
+    color:#875526;
+    font-size:27px;
     font-weight:bold;
 }
 
@@ -243,6 +342,7 @@ section{
 .mapa{
     display:inline-block;
     margin-top:10px;
+
     color:#6b421f;
     font-weight:bold;
     text-decoration:none;
@@ -250,36 +350,113 @@ section{
 
 .dress-img{
     width:100%;
-    max-width:230px;
+    max-width:220px;
     margin-top:15px;
 }
 
-/* FOTOS */
+/* =========================
+   FOTO DE LUCAS
+========================= */
 
-.fotos{
-    text-align:center;
+.lucas-destacado{
     background:#f7efdf;
+    text-align:center;
 }
 
-.fotos h2{
-    font-size:38px;
+.lucas-destacado h2{
+    font-size:40px;
     color:#6b421f;
 }
 
-.foto-principal{
-    width:100%;
-    max-width:500px;
-    margin:25px auto;
-    display:block;
-    border:8px solid #fff;
-    box-shadow:0 8px 25px rgba(0,0,0,.25);
+.lucas-destacado p{
+    font-size:18px;
 }
 
-/* REGALO */
+.lucas-destacado img{
+    width:100%;
+    max-width:600px;
+
+    display:block;
+
+    margin:30px auto;
+
+    border:8px solid white;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.25);
+}
+
+/* =========================
+   GALERÍA
+========================= */
+
+.galeria{
+    background:#2f1b10;
+    padding:75px 15px;
+}
+
+.galeria h2{
+    text-align:center;
+    color:#f6e8ce;
+    font-size:40px;
+    margin-top:0;
+}
+
+.galeria p{
+    text-align:center;
+    color:#dcc6a4;
+    font-size:17px;
+    margin-bottom:40px;
+}
+
+.galeria-grid{
+    max-width:1000px;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:14px;
+}
+
+.galeria-grid img{
+    width:100%;
+    height:430px;
+
+    object-fit:cover;
+
+    display:block;
+
+    border:3px solid #b18a4a;
+
+    transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.galeria-grid img:hover{
+    transform:scale(1.02);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.5);
+}
+
+/* FOTO HORIZONTAL */
+
+.galeria-grid .horizontal{
+    grid-column:span 2;
+    height:520px;
+}
+
+/* =========================
+   REGALO
+========================= */
 
 .regalo{
     text-align:center;
-    background:#e7d1a9;
+    background:#e5cea4;
 }
 
 .regalo h2{
@@ -290,9 +467,13 @@ section{
 .regalo p{
     font-size:19px;
     line-height:1.8;
+    max-width:650px;
+    margin:18px auto;
 }
 
-/* CONFIRMACION */
+/* =========================
+   CONFIRMACIÓN
+========================= */
 
 .confirmacion{
     text-align:center;
@@ -301,25 +482,42 @@ section{
 }
 
 .confirmacion h2{
-    font-size:38px;
+    font-size:40px;
+}
+
+.confirmacion p{
+    font-size:18px;
 }
 
 .whatsapp{
     display:inline-block;
+
     margin-top:20px;
-    padding:16px 28px;
+
+    padding:16px 30px;
+
     background:#f4ead8;
     color:#3b2416;
+
     text-decoration:none;
+
     font-weight:bold;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.25);
 }
 
-/* PIE */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     text-align:center;
-    padding:35px 20px;
+
+    padding:40px 20px;
+
     background:#24150d;
+
     color:#d9c3a0;
 }
 
@@ -327,25 +525,40 @@ footer strong{
     color:#fff0d0;
 }
 
-/* BOTON MUSICA */
+/* =========================
+   BOTÓN MÚSICA
+========================= */
 
 .boton-musica{
     position:fixed;
+
     right:20px;
     bottom:20px;
-    width:55px;
-    height:55px;
+
+    width:56px;
+    height:56px;
+
     border-radius:50%;
+
     border:2px solid #e1c17a;
+
     background:#5a351c;
-    color:#fff;
-    font-size:23px;
+
+    color:white;
+
+    font-size:22px;
+
     cursor:pointer;
+
     z-index:9999;
-    box-shadow:0 5px 15px rgba(0,0,0,.35);
+
+    box-shadow:
+    0 5px 18px rgba(0,0,0,.4);
 }
 
-/* MOVIL */
+/* =========================
+   CELULAR
+========================= */
 
 @media(max-width:700px){
 
@@ -357,6 +570,10 @@ footer strong{
         font-size:20px;
     }
 
+    .portada-contenido{
+        padding:35px 20px;
+    }
+
     .timeline:before{
         left:20px;
     }
@@ -364,9 +581,13 @@ footer strong{
     .evento,
     .evento:nth-child(odd),
     .evento:nth-child(even){
+
         width:100%;
+
         left:0;
+
         text-align:left;
+
         padding-left:55px;
         padding-right:0;
     }
@@ -383,6 +604,43 @@ footer strong{
         font-size:25px;
     }
 
+    .foto-overlay h2{
+        font-size:27px;
+    }
+
+    .galeria-grid{
+        grid-template-columns:1fr;
+    }
+
+    .galeria-grid img,
+    .galeria-grid .horizontal{
+        grid-column:auto;
+        height:auto;
+        aspect-ratio:3/4;
+    }
+
+}
+
+/* =========================
+   ANIMACIÓN SUAVE
+========================= */
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.portada-contenido{
+    animation:aparecer 1.2s ease;
 }
 
 </style>
@@ -392,14 +650,18 @@ footer strong{
 <body>
 
 
-<!-- MUSICA -->
+<!-- =========================
+     MÚSICA
+========================= -->
 
 <audio id="musica" loop preload="auto">
     <source src="./musica.mp3" type="audio/mpeg">
 </audio>
 
 
-<!-- PORTADA -->
+<!-- =========================
+     PORTADA
+========================= -->
 
 <section class="portada">
 
@@ -414,18 +676,26 @@ footer strong{
         <div class="divisor"></div>
 
         <p>
+
             Fátima Ordaz<br>
             &<br>
             Daniel Fernández
+
         </p>
 
         <p>
-            Tenemos el honor de invitarte<br>
+
+            Tenemos el honor de invitarte
             a celebrar este día tan especial.
+
         </p>
 
-        <button class="boton" onclick="abrirInvitacion()">
+        <button
+        class="boton"
+        onclick="abrirInvitacion()">
+
             ABRIR INVITACIÓN
+
         </button>
 
     </div>
@@ -433,9 +703,39 @@ footer strong{
 </section>
 
 
-<!-- INTRO -->
+<!-- =========================
+     FOTO FAMILIAR
+========================= -->
 
-<section class="intro" id="inicio">
+<section class="foto-seccion">
+
+    <img
+    src="imagenes/imagenes-lucas-renombradas/familia-caballo.png"
+    class="foto-full"
+    alt="Lucas y su familia">
+
+    <div class="foto-overlay">
+
+        <div>
+
+            <h2>
+                Una aventura está por comenzar...
+            </h2>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section
+class="intro"
+id="inicio">
 
     <div class="contenedor">
 
@@ -444,14 +744,25 @@ footer strong{
         <div class="divisor"></div>
 
         <p>
+
             Hay momentos que merecen ser celebrados
             y queremos compartir contigo uno muy especial:
-            ¡los 3 años de nuestro pequeño Lucas Izan!
+
         </p>
 
         <p>
+
+            <strong>
+                ¡Los 3 años de nuestro pequeño Lucas Izan!
+            </strong>
+
+        </p>
+
+        <p>
+
             Prepárate para una tarde llena de diversión,
             familia, amigos y mucho estilo vaquero.
+
         </p>
 
     </div>
@@ -459,34 +770,91 @@ footer strong{
 </section>
 
 
-<!-- CUENTA REGRESIVA -->
+<!-- =========================
+     MAMÁ + LUCAS
+========================= -->
+
+<section class="foto-seccion">
+
+    <img
+    src="imagenes/imagenes-lucas-renombradas/mama-lucas.png"
+    class="foto-full"
+    alt="Mamá y Lucas">
+
+    <div class="foto-overlay">
+
+        <h2>
+            Nuestro pequeño vaquero 🤎
+        </h2>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CUENTA REGRESIVA
+========================= -->
 
 <section class="cuenta">
 
     <div class="contenedor">
 
-        <h2>Falta muy poco...</h2>
+        <h2>
+            Falta muy poco...
+        </h2>
 
         <div class="contador">
 
             <div class="numero">
-                <strong id="dias">0</strong>
-                <span>Días</span>
+
+                <strong id="dias">
+                    0
+                </strong>
+
+                <span>
+                    Días
+                </span>
+
             </div>
 
-            <div class="numero">
-                <strong id="horas">0</strong>
-                <span>Horas</span>
-            </div>
 
             <div class="numero">
-                <strong id="minutos">0</strong>
-                <span>Minutos</span>
+
+                <strong id="horas">
+                    0
+                </strong>
+
+                <span>
+                    Horas
+                </span>
+
             </div>
 
+
             <div class="numero">
-                <strong id="segundos">0</strong>
-                <span>Segundos</span>
+
+                <strong id="minutos">
+                    0
+                </strong>
+
+                <span>
+                    Minutos
+                </span>
+
+            </div>
+
+
+            <div class="numero">
+
+                <strong id="segundos">
+                    0
+                </strong>
+
+                <span>
+                    Segundos
+                </span>
+
             </div>
 
         </div>
@@ -496,13 +864,40 @@ footer strong{
 </section>
 
 
-<!-- EVENTOS -->
+<!-- =========================
+     FOTO FAMILIAR
+========================= -->
+
+<section class="foto-familia">
+
+    <div class="contenedor">
+
+        <h2>
+            Los que hacen este día especial
+        </h2>
+
+        <div class="divisor"></div>
+
+        <img
+        src="imagenes/imagenes-lucas-renombradas/familia-lucas.png"
+        alt="Familia de Lucas">
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EVENTOS
+========================= -->
 
 <section class="eventos">
 
     <div class="contenedor">
 
-        <h2>El gran día</h2>
+        <h2>
+            El gran día
+        </h2>
 
         <div class="timeline">
 
@@ -513,27 +908,41 @@ footer strong{
 
                 <div class="evento-contenido">
 
-                    <div class="evento-icono">⛪</div>
+                    <div class="evento-icono">
+                        ⛪
+                    </div>
 
-                    <div class="hora">2:00 PM</div>
+                    <div class="hora">
+                        2:00 PM
+                    </div>
 
-                    <h3>Ceremonia religiosa</h3>
+                    <h3>
+                        Ceremonia religiosa
+                    </h3>
 
                     <p>
-                        <strong>Parroquia Sr. de Esquipulas</strong>
+
+                        <strong>
+                            Parroquia Sr. de Esquipulas
+                        </strong>
+
                     </p>
 
                     <p>
+
                         Señor de Esquipulas 97<br>
                         Arandas, 36626<br>
                         Irapuato, Gto.
+
                     </p>
 
                     <a
                     class="mapa"
                     href="https://www.google.com/maps/search/?api=1&query=Se%C3%B1or%20de%20Esquipulas%2097%2C%20Arandas%2C%2036626%20Irapuato%2C%20Gto."
                     target="_blank">
+
                         📍 Ver ubicación
+
                     </a>
 
                 </div>
@@ -541,33 +950,47 @@ footer strong{
             </div>
 
 
-            <!-- RECEPCION -->
+            <!-- RECEPCIÓN -->
 
             <div class="evento">
 
                 <div class="evento-contenido">
 
-                    <div class="evento-icono">🎉</div>
+                    <div class="evento-icono">
+                        🎉
+                    </div>
 
-                    <div class="hora">3:30 PM</div>
+                    <div class="hora">
+                        3:30 PM
+                    </div>
 
-                    <h3>Recepción</h3>
+                    <h3>
+                        Recepción
+                    </h3>
 
                     <p>
-                        <strong>Salón Cheyene</strong>
+
+                        <strong>
+                            Salón Cheyene
+                        </strong>
+
                     </p>
 
                     <p>
+
                         Blvrd Arandas 3675<br>
                         Villas de Irapuato<br>
                         36821 Irapuato, Gto.
+
                     </p>
 
                     <a
                     class="mapa"
                     href="https://www.google.com/maps/search/?api=1&query=Blvrd%20Arandas%203675%2C%20Villas%20de%20Irapuato%2C%2036821%20Irapuato%2C%20Gto."
                     target="_blank">
+
                         📍 Ver ubicación
+
                     </a>
 
                 </div>
@@ -581,15 +1004,24 @@ footer strong{
 
                 <div class="evento-contenido">
 
-                    <div class="evento-icono">🤠</div>
+                    <div class="evento-icono">
+                        🤠
+                    </div>
 
-                    <div class="hora">DRESS CODE</div>
+                    <div class="hora">
+                        DRESS CODE
+                    </div>
 
-                    <h3>Vaquero / Cowboy</h3>
+                    <h3>
+                        Vaquero / Cowboy
+                    </h3>
 
                     <p>
-                        Ponte tus botas, sombrero y tu mejor
-                        estilo vaquero para acompañarnos.
+
+                        Ponte tus botas, sombrero
+                        y tu mejor estilo vaquero
+                        para acompañarnos.
+
                     </p>
 
                     <img
@@ -609,48 +1041,134 @@ footer strong{
 </section>
 
 
-<!-- FOTO -->
+<!-- =========================
+     LUCAS CON SOMBRERO
+========================= -->
 
-<section class="fotos">
+<section class="lucas-destacado">
 
     <div class="contenedor">
 
-        <h2>Lucas Izan</h2>
+        <h2>
+            El cumpleañero 🤠
+        </h2>
 
         <div class="divisor"></div>
 
-        <img
-        src="imagenes/lucas.jpeg"
-        class="foto-principal"
-        alt="Lucas Izan">
-
         <p>
-            ¡Te esperamos para celebrar juntos!
+            Listo para celebrar sus 3 años.
         </p>
+
+        <img
+        src="imagenes/imagenes-lucas-renombradas/lucas-sombrero.png"
+        alt="Lucas con sombrero">
 
     </div>
 
 </section>
 
 
-<!-- REGALO -->
+<!-- =========================
+     GALERÍA
+========================= -->
+
+<section class="galeria">
+
+    <div class="contenedor">
+
+        <h2>
+            Lucas, nuestro pequeño vaquero
+        </h2>
+
+        <p>
+            Una pequeña colección de momentos
+            de nuestro cumpleañero.
+        </p>
+
+    </div>
+
+
+    <div class="galeria-grid">
+
+
+        <img
+        src="imagenes/imagenes-lucas-renombradas/lucas-chamarra.png"
+        alt="Lucas vaquero">
+
+
+        <img
+        src="imagenes/imagenes-lucas-renombradas/lucas-sonrisa.png"
+        alt="Lucas sonriendo">
+
+
+        <img
+        src="imagenes/imagenes-lucas-renombradas/lucas-vaquero.png"
+        alt="Lucas vestido de vaquero">
+
+
+        <img
+        src="imagenes/imagenes-lucas-renombradas/lucas-traje-negro.png"
+        alt="Lucas con traje negro">
+
+
+        <img
+        class="horizontal"
+        src="imagenes/imagenes-lucas-renombradas/foto-extra.png"
+        alt="Lucas">
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOTO ESPECIAL
+========================= -->
+
+<section class="foto-seccion">
+
+    <img
+    src="imagenes/imagenes-lucas-renombradas/familia-lucas.png"
+    class="foto-full"
+    alt="Familia">
+
+    <div class="foto-overlay">
+
+        <h2>
+            Gracias por ser parte de nuestra historia 🤎
+        </h2>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     REGALO
+========================= -->
 
 <section class="regalo">
 
     <div class="contenedor">
 
-        <h2>Tu presencia es el mejor regalo</h2>
+        <h2>
+            Tu presencia es el mejor regalo
+        </h2>
 
         <div class="divisor"></div>
 
         <p>
-            Lo más importante para nosotros es compartir
-            este día contigo.
+
+            Lo más importante para nosotros
+            es compartir este día contigo.
+
         </p>
 
         <p>
+
             Si deseas obsequiarle algo a Lucas,
             tendremos un espacio para sobres.
+
         </p>
 
     </div>
@@ -658,13 +1176,17 @@ footer strong{
 </section>
 
 
-<!-- CONFIRMACION -->
+<!-- =========================
+     CONFIRMACIÓN
+========================= -->
 
 <section class="confirmacion">
 
     <div class="contenedor">
 
-        <h2>¿Nos acompañas?</h2>
+        <h2>
+            ¿Nos acompañas?
+        </h2>
 
         <p>
             Confirma tu asistencia por WhatsApp.
@@ -684,7 +1206,9 @@ footer strong{
 </section>
 
 
-<!-- PIE -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -703,7 +1227,9 @@ footer strong{
 </footer>
 
 
-<!-- BOTON DE MUSICA -->
+<!-- =========================
+     BOTÓN MÚSICA
+========================= -->
 
 <button
 class="boton-musica"
@@ -717,87 +1243,93 @@ onclick="reproducirMusica()">
 
 <script>
 
-/* ==========================
-   MUSICA
-========================== */
+/* =========================
+   MÚSICA
+========================= */
 
-var musica = document.getElementById("musica");
-var botonMusica = document.getElementById("botonMusica");
+var musica =
+document.getElementById("musica");
+
+var botonMusica =
+document.getElementById("botonMusica");
 
 
 function actualizarBoton(){
 
     if(musica.paused){
 
-        botonMusica.innerHTML = "♪";
+        botonMusica.innerHTML="♪";
 
     }else{
 
-        botonMusica.innerHTML = "❚❚";
+        botonMusica.innerHTML="❚❚";
 
     }
 
 }
 
 
-/* ABRIR INVITACION */
+/* ABRIR INVITACIÓN */
 
 function abrirInvitacion(){
 
-    /*
-       Forzamos la ruta del archivo
-       para asegurarnos de que GitHub Pages
-       encuentre musica.mp3
-    */
-
-    musica.src = "./musica.mp3";
+    musica.src="./musica.mp3";
 
     musica.load();
 
-    var promesa = musica.play();
+    var promesa=musica.play();
 
-    if(promesa !== undefined){
+    if(promesa!==undefined){
 
         promesa.then(function(){
 
-            botonMusica.innerHTML = "❚❚";
+            botonMusica.innerHTML="❚❚";
 
         }).catch(function(error){
 
-            console.log("Error al reproducir:", error);
+            console.log(
+                "Error al reproducir:",
+                error
+            );
 
         });
 
     }
 
-    document.getElementById("inicio").scrollIntoView({
+    document
+    .getElementById("inicio")
+    .scrollIntoView({
         behavior:"smooth"
     });
 
 }
 
 
-/* BOTON DE MUSICA */
+/* BOTÓN DE MÚSICA */
 
 function reproducirMusica(){
 
     if(musica.paused){
 
-        musica.src = "./musica.mp3";
+        musica.src="./musica.mp3";
 
         musica.play()
+
         .then(function(){
 
-            botonMusica.innerHTML = "❚❚";
+            botonMusica.innerHTML="❚❚";
 
         })
+
         .catch(function(error){
 
-            console.log("Error al reproducir:", error);
+            console.log(
+                "Error al reproducir:",
+                error
+            );
 
             alert(
-                "No se pudo reproducir la música. " +
-                "Verifica el volumen de tu dispositivo."
+                "No se pudo reproducir la música."
             );
 
         });
@@ -806,89 +1338,123 @@ function reproducirMusica(){
 
         musica.pause();
 
-        botonMusica.innerHTML = "♪";
+        botonMusica.innerHTML="♪";
 
     }
 
 }
 
 
-/* ACTUALIZAR BOTON */
+musica.addEventListener(
+    "play",
+    function(){
 
-musica.addEventListener("play", function(){
+        botonMusica.innerHTML="❚❚";
 
-    botonMusica.innerHTML = "❚❚";
-
-});
-
-
-musica.addEventListener("pause", function(){
-
-    botonMusica.innerHTML = "♪";
-
-});
+    }
+);
 
 
-/* ==========================
+musica.addEventListener(
+    "pause",
+    function(){
+
+        botonMusica.innerHTML="♪";
+
+    }
+);
+
+
+/* =========================
    CUENTA REGRESIVA
-========================== */
+========================= */
 
-var fechaEvento = new Date("November 14, 2026 14:00:00").getTime();
+var fechaEvento =
+new Date(
+    "November 14, 2026 14:00:00"
+).getTime();
 
 
 function actualizarCuenta(){
 
-    var ahora = new Date().getTime();
+    var ahora =
+    new Date().getTime();
 
-    var diferencia = fechaEvento - ahora;
+    var diferencia =
+    fechaEvento-ahora;
 
 
-    if(diferencia <= 0){
+    if(diferencia<=0){
 
-        document.getElementById("dias").innerHTML = "0";
-        document.getElementById("horas").innerHTML = "0";
-        document.getElementById("minutos").innerHTML = "0";
-        document.getElementById("segundos").innerHTML = "0";
+        document.getElementById("dias")
+        .innerHTML="0";
+
+        document.getElementById("horas")
+        .innerHTML="0";
+
+        document.getElementById("minutos")
+        .innerHTML="0";
+
+        document.getElementById("segundos")
+        .innerHTML="0";
 
         return;
 
     }
 
 
-    var dias = Math.floor(
-        diferencia / (1000 * 60 * 60 * 24)
-    );
-
-    var horas = Math.floor(
-        (diferencia % (1000 * 60 * 60 * 24))
-        / (1000 * 60 * 60)
-    );
-
-    var minutos = Math.floor(
-        (diferencia % (1000 * 60 * 60))
-        / (1000 * 60)
-    );
-
-    var segundos = Math.floor(
-        (diferencia % (1000 * 60))
-        / 1000
+    var dias =
+    Math.floor(
+        diferencia/
+        (1000*60*60*24)
     );
 
 
-    document.getElementById("dias").innerHTML = dias;
+    var horas =
+    Math.floor(
+        (diferencia%
+        (1000*60*60*24))/
+        (1000*60*60)
+    );
 
-    document.getElementById("horas").innerHTML = horas;
 
-    document.getElementById("minutos").innerHTML = minutos;
+    var minutos =
+    Math.floor(
+        (diferencia%
+        (1000*60*60))/
+        (1000*60)
+    );
 
-    document.getElementById("segundos").innerHTML = segundos;
+
+    var segundos =
+    Math.floor(
+        (diferencia%
+        (1000*60))/
+        1000
+    );
+
+
+    document.getElementById("dias")
+    .innerHTML=dias;
+
+    document.getElementById("horas")
+    .innerHTML=horas;
+
+    document.getElementById("minutos")
+    .innerHTML=minutos;
+
+    document.getElementById("segundos")
+    .innerHTML=segundos;
 
 }
 
 
 actualizarCuenta();
 
-setInterval(actualizarCuenta,1000);
+setInterval(
+    actualizarCuenta,
+    1000
+);
 
 </script>
 
